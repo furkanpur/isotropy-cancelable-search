@@ -1,0 +1,194 @@
+{
+ "by_source": {
+  "casia_ageing": {
+   "fingers": 185,
+   "images": 5549,
+   "train_fingers": 166,
+   "train_images": 4980,
+   "val_fingers": 19,
+   "val_images": 569
+  },
+  "casia_v5": {
+   "fingers": 1647,
+   "images": 8235,
+   "train_fingers": 1482,
+   "train_images": 7410,
+   "val_fingers": 165,
+   "val_images": 825
+  },
+  "crossmatch": {
+   "fingers": 22,
+   "images": 176,
+   "train_fingers": 20,
+   "train_images": 160,
+   "val_fingers": 2,
+   "val_images": 16
+  },
+  "fvc2000": {
+   "fingers": 12,
+   "images": 96,
+   "train_fingers": 11,
+   "train_images": 88,
+   "val_fingers": 1,
+   "val_images": 8
+  },
+  "fvc2002": {
+   "fingers": 8,
+   "images": 64,
+   "train_fingers": 7,
+   "train_images": 56,
+   "val_fingers": 1,
+   "val_images": 8
+  },
+  "sd301": {
+   "fingers": 201,
+   "images": 2057,
+   "train_fingers": 181,
+   "train_images": 1856,
+   "val_fingers": 20,
+   "val_images": 201
+  },
+  "sd302": {
+   "fingers": 1579,
+   "images": 10925,
+   "train_fingers": 1421,
+   "train_images": 9822,
+   "val_fingers": 158,
+   "val_images": 1103
+  },
+  "uareu": {
+   "fingers": 30,
+   "images": 240,
+   "train_fingers": 27,
+   "train_images": 216,
+   "val_fingers": 3,
+   "val_images": 24
+  }
+ },
+ "config": {
+  "partition": "development",
+  "seed": 20261115,
+  "validation_fraction": 0.1
+ },
+ "data_source": "real: compilation real part, the fingers of the first corpus's relabel map (development partition, exclusion none, exact duplicates within a finger collapsed); D2 is the second corpus of the study",
+ "devices": {
+  "distinct": 27,
+  "images_by_device": {
+   "": 8651,
+   "C": 1578,
+   "DB1_B": 56,
+   "DB2_B": 48,
+   "DB3_B": 56,
+   "E": 1504,
+   "G": 569,
+   "K": 746,
+   "M": 1562,
+   "P": 229,
+   "R": 710,
+   "S": 869,
+   "T2": 924,
+   "U": 1579,
+   "V": 1579,
+   "dryrun-A": 201,
+   "dryrun-B": 201,
+   "dryrun-C": 201,
+   "dryrun-D": 195,
+   "dryrun-E": 201,
+   "dryrun-F": 84,
+   "dryrun-G": 183,
+   "dryrun-H": 184,
+   "dryrun-J": 201,
+   "dryrun-M": 205,
+   "dryrun-N": 201,
+   "uru4000": 2775,
+   "uru4500": 1850
+  }
+ },
+ "disjointness": {
+  "content_overlap": 0,
+  "d2_fingers_with_shared_subject": {
+   "by_source": {
+    "casia_ageing": 11,
+    "casia_v5": 2181,
+    "crossmatch": 29,
+    "fvc2000": 18,
+    "fvc2002": 22,
+    "sd301": 39,
+    "sd302": 413,
+    "uareu": 35
+   },
+   "total": 2748
+  },
+  "d2_fingers_without_shared_subject": {
+   "by_source": {
+    "casia_v5": 56,
+    "polyu_cross": 336
+   },
+   "total": 392
+  },
+  "d2_keys_checked": 18493,
+  "d2_rows": 18493,
+  "identity_overlap": 0,
+  "subjects": {
+   "by_source_subject": {
+    "d2": 720,
+    "shared": 704,
+    "train": 780
+   },
+   "by_subject_key": {
+    "d2": 718,
+    "shared": 710,
+    "train": 759
+   }
+  }
+ },
+ "fingers": 3684,
+ "images": 27342,
+ "images_per_finger": {
+  "max": 30,
+  "median": 6.0,
+  "min": 5
+ },
+ "inputs_sha256": {
+  "IDENTITIES.csv": "51c11f2598373b784506b3a1322fed19e1c48d958dcc87323e9f2d1127d13305",
+  "MANIFEST.csv": "f3bcf04b506d7135708d8da0af019f6c1d5f07a215897999493d0fbc634b5158",
+  "d1_relabel.csv": "95f9387d3fcfd8fff7dbb86fdb2bbc79022d1c7766598ff0c497c145fca3dff2",
+  "d2_manifest.parquet": "5aca7a0b8d8274f73db1b188f9a606e1a7c98dd3d6b45f8052e92284b9e96335",
+  "compilation_keys.parquet": "cefeaa765aa9ba690cec4349899e6d0a8ef7957f609c4a8f05308473404507ae"
+ },
+ "probe": {
+  "fingers_with_an_unusable_image": 0,
+  "probe_key_differs_from_key_table": 0,
+  "probed": 27342,
+  "unusable": 0,
+  "unusable_by_mode": {}
+ },
+ "provenance": {
+  "env": {
+   "git_sha": "c8fd4961da677c72ce1fbc9037ef6a1e177bd77f",
+   "image": "canvec/extract:gpu",
+   "image_id": "sha256:be5673c663cfcee9fac6b41656bf97085caa15d36b91d9a2efd3b299f1e28d0d"
+  },
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "python": "3.12.3",
+  "script_sha256": "6ef8e7e43a154c8555dc9de73e1380a0af0afc7d2601eb5f1ff0a266ae112959"
+ },
+ "selection": {
+  "d1_identities": 3694,
+  "duplicate_rows_collapsed": 0,
+  "identities": 3684,
+  "identities_dropped_partition": 10,
+  "identities_found": 3694,
+  "identities_requested": 3694,
+  "keys_shared_across_fingers": 0,
+  "rows": 27342,
+  "rows_before": 27422,
+  "rows_dropped_partition": 80,
+  "rows_with_shared_keys": 0
+ },
+ "train_fingers": 3315,
+ "train_images": 24588,
+ "val_fingers": 369,
+ "val_images": 2754
+}

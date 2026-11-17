@@ -1,0 +1,16 @@
+name: scale_d1_base_secondary
+data: {kind: sin, root: /data/primary, model: base, relabel: /data/relabel/d1_relabel.csv}
+split: {n_dev: 1000, n_tgt: 1200, seed: 101}
+preconditioner: "fi:128:512"
+schemes: ["lrp:full", "biohash:half", "iom:256"]
+distractors:
+  kind: sin
+  root: /data/secondary
+  model: base
+  relabel: /data/relabel/secondary_relabel.csv
+  relabel_key: path
+  exclude_primary_identities: true
+  sizes: [1000, 2000, 3000]
+  seed: 7
+  near_dup_cos: 0.95
+hnsw: {m: 32, ef_construction: 200, ef_search: [64, 128]}

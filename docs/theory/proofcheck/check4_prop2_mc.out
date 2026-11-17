@@ -1,0 +1,26 @@
+c*(r=8, m=32) = 0.48846   sqrt(r/m) = 0.50000   trials=200, victims/trial=1000
+law                scheme          decoder                         E cos      se (Ecos-c*)/se
+gauss_iso          LRP-full        projection                     0.4885  0.0002         0.02
+gauss_iso          LRP-full        ridge lam=1                    0.4883  0.0002        -0.57
+gauss_iso          LRP-full        projection + S-perp noise      0.4293  0.0003      -185.03
+gauss_iso          BioHash k=m     ridge lam=1e-6                 0.3001  0.0007      -284.83
+gauss_iso          BioHash k=m     SimHash-angle LS               0.3020  0.0006      -290.40
+gauss_iso          GRP-IoM 256/8   one-hot ridge lam=1e-6         0.2270  0.0009      -297.46
+gauss_iso          GRP-IoM 256/8   agreement-weighted anchors     0.3031  0.0006      -336.42
+lognormal_radius   LRP-full        projection                     0.4885  0.0003         0.12
+lognormal_radius   LRP-full        ridge lam=1                    0.4155  0.0019       -37.68
+lognormal_radius   LRP-full        projection + S-perp noise      0.1897  0.0005      -618.38
+lognormal_radius   BioHash k=m     ridge lam=1e-6                 0.2300  0.0021      -121.84
+lognormal_radius   BioHash k=m     SimHash-angle LS               0.3006  0.0006      -292.38
+lognormal_radius   GRP-IoM 256/8   one-hot ridge lam=1e-6         0.1810  0.0016      -191.35
+lognormal_radius   GRP-IoM 256/8   agreement-weighted anchors     0.2487  0.0019      -128.78
+student_t3         LRP-full        projection                     0.4883  0.0002        -0.51
+student_t3         LRP-full        ridge lam=1                    0.4880  0.0002        -1.70
+student_t3         LRP-full        projection + S-perp noise      0.4346  0.0003      -175.98
+student_t3         BioHash k=m     ridge lam=1e-6                 0.2730  0.0014      -153.99
+student_t3         BioHash k=m     SimHash-angle LS               0.3015  0.0007      -282.27
+student_t3         GRP-IoM 256/8   one-hot ridge lam=1e-6         0.2098  0.0012      -230.77
+student_t3         GRP-IoM 256/8   agreement-weighted anchors     0.2839  0.0012      -176.70
+gauss_aniso        LRP-full        projection                     0.6478  0.0014       110.97
+gauss_aniso        LRP-full        ridge lam=1                    0.6474  0.0014       110.59
+gauss_aniso        LRP-full        projection + S-perp noise      0.5941  0.0015        69.34

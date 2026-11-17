@@ -1,0 +1,55 @@
+/usr/local/lib/python3.12/site-packages/ot/bregman/_sinkhorn.py:666: UserWarning: Sinkhorn did not converge. You might want to increase the number of iterations `numItermax` or the regularization parameter `reg`.
+  warnings.warn(
+[   420.1s] seed=101 pre=none done
+[   485.0s] seed=101 pre=pca128_a1 done
+[   564.2s] seed=101 pre=pca256_a1 done
+[   630.6s] seed=101 pre=pca128_a0.5 done
+[   675.3s] seed=101 pre=fi64_p512 done
+[   768.5s] seed=101 pre=fi128_p512 done
+[   845.1s] seed=101 pre=fi256_p512 done
+[   927.8s] seed=101 pre=rbig128_i2 done
+[  1024.6s] seed=101 pre=firbig128_p512_i2 done
+/usr/local/lib/python3.12/site-packages/ot/bregman/_sinkhorn.py:666: UserWarning: Sinkhorn did not converge. You might want to increase the number of iterations `numItermax` or the regularization parameter `reg`.
+  warnings.warn(
+[  1400.6s] seed=102 pre=none done
+[  1461.6s] seed=102 pre=pca128_a1 done
+[  1527.2s] seed=102 pre=pca256_a1 done
+[  1587.3s] seed=102 pre=pca128_a0.5 done
+[  1620.8s] seed=102 pre=fi64_p512 done
+[  1717.2s] seed=102 pre=fi128_p512 done
+[  1799.9s] seed=102 pre=fi256_p512 done
+[  1884.3s] seed=102 pre=rbig128_i2 done
+[  1966.4s] seed=102 pre=firbig128_p512_i2 done
+/usr/local/lib/python3.12/site-packages/ot/bregman/_sinkhorn.py:666: UserWarning: Sinkhorn did not converge. You might want to increase the number of iterations `numItermax` or the regularization parameter `reg`.
+  warnings.warn(
+[  2313.3s] seed=103 pre=none done
+[  2371.7s] seed=103 pre=pca128_a1 done
+[  2427.7s] seed=103 pre=pca256_a1 done
+[  2467.9s] seed=103 pre=pca128_a0.5 done
+[  2498.2s] seed=103 pre=fi64_p512 done
+[  2573.8s] seed=103 pre=fi128_p512 done
+[  2637.2s] seed=103 pre=fi256_p512 done
+[  2699.2s] seed=103 pre=rbig128_i2 done
+[  2762.9s] seed=103 pre=firbig128_p512_i2 done
+/usr/local/lib/python3.12/site-packages/ot/bregman/_sinkhorn.py:666: UserWarning: Sinkhorn did not converge. You might want to increase the number of iterations `numItermax` or the regularization parameter `reg`.
+  warnings.warn(
+[  3004.0s] seed=104 pre=none done
+[  3045.9s] seed=104 pre=pca128_a1 done
+[  3107.8s] seed=104 pre=pca256_a1 done
+[  3161.1s] seed=104 pre=pca128_a0.5 done
+[  3197.5s] seed=104 pre=fi64_p512 done
+[  3269.0s] seed=104 pre=fi128_p512 done
+[  3317.1s] seed=104 pre=fi256_p512 done
+[  3380.1s] seed=104 pre=rbig128_i2 done
+[  3442.9s] seed=104 pre=firbig128_p512_i2 done
+/usr/local/lib/python3.12/site-packages/ot/bregman/_sinkhorn.py:666: UserWarning: Sinkhorn did not converge. You might want to increase the number of iterations `numItermax` or the regularization parameter `reg`.
+  warnings.warn(
+[  3625.9s] seed=105 pre=none done
+[  3646.2s] seed=105 pre=pca128_a1 done
+[  3671.0s] seed=105 pre=pca256_a1 done
+[  3690.1s] seed=105 pre=pca128_a0.5 done
+[  3703.2s] seed=105 pre=fi64_p512 done
+[  3731.1s] seed=105 pre=fi128_p512 done
+[  3753.8s] seed=105 pre=fi256_p512 done
+[  3785.7s] seed=105 pre=rbig128_i2 done
+[  3816.5s] seed=105 pre=firbig128_p512_i2 done

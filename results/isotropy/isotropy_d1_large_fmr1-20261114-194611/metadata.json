@@ -1,0 +1,187 @@
+{
+  "config": {
+    "name": "d1_large_fmr1",
+    "data": {
+      "kind": "sin",
+      "root": "/data/primary",
+      "model": "large",
+      "relabel": "/data/relabel/d1_relabel.csv",
+      "shifted_aux": {
+        "kind": "sin",
+        "root": "/data/secondary",
+        "model": "large",
+        "relabel": "/data/relabel/secondary_relabel.csv",
+        "relabel_key": "path",
+        "exclude_primary_identities": true,
+        "near_dup_cos": 0.95
+      }
+    },
+    "split": {
+      "n_dev": 1000,
+      "n_tgt": 1200,
+      "min_tgt_images": 3,
+      "seeds": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ]
+    },
+    "keys_per_seed": 3,
+    "fmr": [
+      0.01,
+      0.001
+    ],
+    "preconditioners": [
+      "none",
+      "pca:128:1",
+      "pca:256:1",
+      "pca:128:0.5",
+      "fi:64:512",
+      "fi:128:512",
+      "fi:256:512",
+      "rbig:128:2",
+      "firbig:128:512:2"
+    ],
+    "schemes": [
+      "lrp:full",
+      "lrp:half",
+      "biohash:half",
+      "iom:256"
+    ],
+    "attacks": {
+      "anchor": {
+        "r_grid": [
+          5,
+          10,
+          20,
+          40,
+          80,
+          160,
+          320,
+          640
+        ],
+        "variants": [
+          "exact",
+          "fresh"
+        ],
+        "decoders": [
+          "ridge",
+          "proj",
+          "mlp"
+        ],
+        "min_targets": 100,
+        "mlp_subset": {
+          "pres": [
+            "none",
+            "fi:128:512"
+          ],
+          "schemes": [
+            "lrp:full",
+            "iom:256"
+          ],
+          "r": [
+            80,
+            320,
+            640
+          ]
+        }
+      },
+      "zeropair": {
+        "p_grid": [
+          8,
+          16,
+          32,
+          64,
+          128
+        ],
+        "methods": [
+          "eigen",
+          "ica",
+          "wp"
+        ],
+        "ica_max_dim": 128,
+        "expensive_keys": 1
+      },
+      "postcompromise": {
+        "enabled": true,
+        "keys": 1
+      }
+    },
+    "bootstrap": {
+      "n_boot": 1000
+    }
+  },
+  "data_source": "sin:primary:large:relabel=d1_relabel.csv:key=basename:dropped=126",
+  "data_files": {
+    "emb_large.npy": "4a34ed726772919b1e3030fa1c3a04ead6724e122ee471e71fadecc57a6a867e",
+    "manifest.parquet": "3b0d59101d80ea08d240688ce33001c79ceae70f993fe10f71e6769fc4a21f2f",
+    "relabel:d1_relabel.csv": "95f9387d3fcfd8fff7dbb86fdb2bbc79022d1c7766598ff0c497c145fca3dff2",
+    "shifted:emb_large.npy": "71587818fbf35b302a03262b2bb8792ba9c6d8c6dc7f1ff0b09f536fe63b75b4",
+    "shifted:manifest.parquet": "8a85f736cf74407115671f019e8220bda299083c8c7e4aa24174a87580f32e4c",
+    "shifted:relabel:secondary_relabel.csv": "a900fd5c9b29d7b31368278f370672051b33d3be9d0e62930061ff7d7e69c5cc"
+  },
+  "git_sha": "df324d0e354cfda3982841467d08190ee1cc8447",
+  "image_freeze": "cloudpickle==3.1.2\ncontourpy==1.4.0\ncycler==0.12.1\nfaiss-cpu==1.15.1\nfonttools==4.68.0\njoblib==1.6.0\nkiwisolver==1.5.1\nmatplotlib==3.11.2\nnarwhals==2.28.0\nnumpy==2.5.4\npackaging==26.3\npandas==3.1.0\npillow==13.0.0\nPOT==0.9.7.post1\npyarrow==26.0.0\npyparsing==3.3.3\npython-dateutil==4.0.0\nPyYAML==6.0.3\nscikit-learn==1.9.1\nscipy==1.18.1\nthreadpoolctl==3.8.0\ntzdata==2026.6\n",
+  "omp_num_threads": "4",
+  "cpu_model": "AMD Ryzen 9 7950X 16-Core Processor",
+  "corpus_counts": {
+    "images": 10233,
+    "identities": 3694,
+    "identities_ge_min_tgt_images": 2362
+  },
+  "split_counts": {
+    "101": {
+      "dev_identities": 1000,
+      "tgt_identities": 1200,
+      "aux_identities": 1494,
+      "dev_images": 1939,
+      "tgt_images": 4167,
+      "aux_images": 4127
+    },
+    "102": {
+      "dev_identities": 1000,
+      "tgt_identities": 1200,
+      "aux_identities": 1494,
+      "dev_images": 1917,
+      "tgt_images": 4171,
+      "aux_images": 4145
+    },
+    "103": {
+      "dev_identities": 1000,
+      "tgt_identities": 1200,
+      "aux_identities": 1494,
+      "dev_images": 1965,
+      "tgt_images": 4163,
+      "aux_images": 4105
+    },
+    "104": {
+      "dev_identities": 1000,
+      "tgt_identities": 1200,
+      "aux_identities": 1494,
+      "dev_images": 1877,
+      "tgt_images": 4135,
+      "aux_images": 4221
+    },
+    "105": {
+      "dev_identities": 1000,
+      "tgt_identities": 1200,
+      "aux_identities": 1494,
+      "dev_images": 1863,
+      "tgt_images": 4157,
+      "aux_images": 4213
+    }
+  },
+  "aux_sizes": {
+    "same_dist": 4127,
+    "shifted": 3224
+  },
+  "shifted_aux_source": "sin:secondary:large:relabel=secondary_relabel.csv:key=path:dropped=249:shared_ids_removed=11387:dedup<0.95",
+  "shifted_aux_removed": 3,
+  "secondary_removed_shared_identity": 11387,
+  "python": "3.12.16",
+  "numpy": "2.5.4",
+  "started_utc": "2026-11-14T16:46:13.349353+00:00",
+  "runtime_s": 3816.933408975601
+}

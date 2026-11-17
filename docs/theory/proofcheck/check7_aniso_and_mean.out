@@ -1,0 +1,15 @@
+(a) anisotropic anchors, m=32
+  spectrum 1/j    PR= 10.2 r= 4: E||P_S z||^2/||z||^2=0.259   r/m=0.125   top-r fraction=0.513
+  spectrum 1/j    PR= 10.2 r= 8: E||P_S z||^2/||z||^2=0.433   r/m=0.250   top-r fraction=0.670
+  spectrum 1/j    PR= 10.2 r=16: E||P_S z||^2/||z||^2=0.680   r/m=0.500   top-r fraction=0.833
+  spectrum 1/j^2  PR=  2.4 r= 4: E||P_S z||^2/||z||^2=0.617   r/m=0.125   top-r fraction=0.882
+  spectrum 1/j^2  PR=  2.4 r= 8: E||P_S z||^2/||z||^2=0.791   r/m=0.250   top-r fraction=0.946
+  spectrum 1/j^2  PR=  2.4 r=16: E||P_S z||^2/||z||^2=0.917   r/m=0.500   top-r fraction=0.982
+  spectrum flat   PR= 32.0 r= 4: E||P_S z||^2/||z||^2=0.125   r/m=0.125   top-r fraction=0.125
+  spectrum flat   PR= 32.0 r= 8: E||P_S z||^2/||z||^2=0.250   r/m=0.250   top-r fraction=0.250
+  spectrum flat   PR= 32.0 r=16: E||P_S z||^2/||z||^2=0.503   r/m=0.500   top-r fraction=0.500
+
+(b) residual mean resolves signs: m=32, n_dev=1024, attacker knows Sigma and mu (oracle AUX)
+  ||mu||=0.0   N/n_dev=  1: 0.002  N/n_dev=  4: 0.026  N/n_dev= 16: -0.019  N/n_dev= 64: -0.057
+  ||mu||=0.1   N/n_dev=  1: 0.035  N/n_dev=  4: 0.122  N/n_dev= 16: 0.301  N/n_dev= 64: 0.608
+  ||mu||=0.3   N/n_dev=  1: 0.054  N/n_dev=  4: 0.135  N/n_dev= 16: 0.355  N/n_dev= 64: 0.651

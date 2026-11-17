@@ -1,0 +1,3 @@
+# Joint stage (joint alignment-plus-anchor collusion attack) on isotropy_d1_base.yaml, reused unchanged.
+base: isotropy_d1_base.yaml
+stages: [joint]

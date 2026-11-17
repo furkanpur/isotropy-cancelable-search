@@ -1,0 +1,13 @@
+name: smoke
+data: {kind: synthetic, n_ids: 260, per_id: 3, dim: 24, decay: 1.0, seed: 0}
+split: {n_dev: 80, n_tgt: 120, min_tgt_images: 3, seeds: [1]}
+keys_per_seed: 1
+fmr: [0.01]
+preconditioners: [none, "fi:12:20"]
+schemes: ["lrp:full", "biohash:full", "iom:64"]
+attacks:
+  anchor: {r_grid: [5, 20], variants: [exact, fresh], decoders: [ridge, proj, mlp], min_targets: 50,
+           mlp_subset: {pres: [none], schemes: ["lrp:full"], r: [20]}}
+  zeropair: {p_grid: [4, 8], methods: [eigen, ica, wp], ica_max_dim: 24, expensive_keys: 1}
+  postcompromise: {enabled: true, keys: 1}
+bootstrap: {n_boot: 100}

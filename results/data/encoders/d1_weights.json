@@ -1,0 +1,18 @@
+{
+ "data_source": "real: weight files of the D1 encoders on the data host, hashed read-only with sha256sum (2026-11-17); the three copies of each checkpoint are byte-identical; basenames only",
+ "encoders": {
+  "d1_base": {
+   "checkpoint": "gazi_base_extended",
+   "file": "model.safetensors",
+   "bytes": 346358264,
+   "sha256": "9835b834bbfdaf92aea69f26f77eea68cd49bf3afce6cc6337171c60731c7443"
+  },
+  "d1_large": {
+   "checkpoint": "gazi_large_extended",
+   "file": "model.safetensors",
+   "bytes": 1217539344,
+   "sha256": "48669b37edafcfae7f247fb7efd80b96f2eb08657f972b215902d3c0f499be75"
+  }
+ },
+ "note": "The D1 embeddings of the conference paper were extracted with these checkpoints; the weights are not released."
+}

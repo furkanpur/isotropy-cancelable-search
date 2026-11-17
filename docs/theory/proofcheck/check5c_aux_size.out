@@ -1,0 +1,6 @@
+n_aux/n_dev=    1: E cos (oracle sign, N=1000 n_dev) = 0.262
+n_aux/n_dev=    4: E cos (oracle sign, N=1000 n_dev) = 0.413
+n_aux/n_dev=   16: E cos (oracle sign, N=1000 n_dev) = 0.671
+n_aux/n_dev=   64: E cos (oracle sign, N=1000 n_dev) = 0.845
+n_aux/n_dev=  256: E cos (oracle sign, N=1000 n_dev) = 0.945
+n_aux/n_dev= 1000: E cos (oracle sign, N=1000 n_dev) = 0.979

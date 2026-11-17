@@ -1,0 +1,249 @@
+{
+  "d1": {
+    "identities": 3694,
+    "manifest_images": 10359,
+    "relabel_map_rows": 10233,
+    "unassigned_images": 126
+  },
+  "d1_fingers": {
+    "fraction": 0.903898,
+    "compilation_images": 36193,
+    "compilation_images_in_pool": 28669,
+    "in_pool": 3339,
+    "of": 3694,
+    "only_via_ambiguous_keys": 0,
+    "per_source": {
+      "casia_ageing": {
+        "fraction": 1.0,
+        "in_pool": 185,
+        "of": 185
+      },
+      "casia_v5": {
+        "fraction": 0.793564,
+        "in_pool": 1307,
+        "of": 1647
+      },
+      "crossmatch": {
+        "fraction": 0.818182,
+        "in_pool": 18,
+        "of": 22
+      },
+      "fvc2000": {
+        "fraction": 0.833333,
+        "in_pool": 10,
+        "of": 12
+      },
+      "fvc2002": {
+        "fraction": 0.875,
+        "in_pool": 7,
+        "of": 8
+      },
+      "fvc2004": {
+        "fraction": 0.9,
+        "in_pool": 9,
+        "of": 10
+      },
+      "sd301": {
+        "fraction": 1.0,
+        "in_pool": 201,
+        "of": 201
+      },
+      "sd302": {
+        "fraction": 1.0,
+        "in_pool": 1579,
+        "of": 1579
+      },
+      "uareu": {
+        "fraction": 0.766667,
+        "in_pool": 23,
+        "of": 30
+      }
+    },
+    "worst_case": {
+      "fraction": 0.903898,
+      "in_pool": 3339,
+      "of": 3694,
+      "per_source": {
+        "casia_ageing": {
+          "fraction": 1.0,
+          "in_pool": 185,
+          "of": 185
+        },
+        "casia_v5": {
+          "fraction": 0.793564,
+          "in_pool": 1307,
+          "of": 1647
+        },
+        "crossmatch": {
+          "fraction": 0.818182,
+          "in_pool": 18,
+          "of": 22
+        },
+        "fvc2000": {
+          "fraction": 0.833333,
+          "in_pool": 10,
+          "of": 12
+        },
+        "fvc2002": {
+          "fraction": 0.875,
+          "in_pool": 7,
+          "of": 8
+        },
+        "fvc2004": {
+          "fraction": 0.9,
+          "in_pool": 9,
+          "of": 10
+        },
+        "sd301": {
+          "fraction": 1.0,
+          "in_pool": 201,
+          "of": 201
+        },
+        "sd302": {
+          "fraction": 1.0,
+          "in_pool": 1579,
+          "of": 1579
+        },
+        "uareu": {
+          "fraction": 0.766667,
+          "in_pool": 23,
+          "of": 30
+        }
+      }
+    }
+  },
+  "d1_images": {
+    "fraction": 0.807192,
+    "in_pool": 8260,
+    "of": 10233,
+    "per_source": {
+      "casia_ageing": {
+        "fraction": 0.845367,
+        "in_pool": 1323,
+        "of": 1565
+      },
+      "casia_v5": {
+        "fraction": 0.793564,
+        "in_pool": 3921,
+        "of": 4941
+      },
+      "crossmatch": {
+        "fraction": 0.818182,
+        "in_pool": 54,
+        "of": 66
+      },
+      "fvc2000": {
+        "fraction": 0.833333,
+        "in_pool": 30,
+        "of": 36
+      },
+      "fvc2002": {
+        "fraction": 0.875,
+        "in_pool": 21,
+        "of": 24
+      },
+      "fvc2004": {
+        "fraction": 0.9,
+        "in_pool": 27,
+        "of": 30
+      },
+      "sd301": {
+        "fraction": 0.804396,
+        "in_pool": 366,
+        "of": 455
+      },
+      "sd302": {
+        "fraction": 0.809319,
+        "in_pool": 2449,
+        "of": 3026
+      },
+      "uareu": {
+        "fraction": 0.766667,
+        "in_pool": 69,
+        "of": 90
+      }
+    },
+    "unassigned": {
+      "images": 126,
+      "in_pool": 111
+    },
+    "unreadable": 0
+  },
+  "data_source": "real: first-corpus (D1) images and candidate training pool A; identities and sources from the labelled rows of compilation `real` (internal research corpus of real fingerprint images); no synthetic data",
+  "finger_rule": "a relabel-map identity counts when at least one of its labelled compilation images (any impression, any exclusion or partition) has its exact key in the pool; a pool key under several compilation identities is ambiguous: in_pool counts unique keys only, worst_case adds the ambiguous ones",
+  "compilation_key_table": {
+    "distinct_keys": 100124,
+    "keys_under_several_identities": 11,
+    "labelled_rows": 100142,
+    "table_sha256": "cefeaa765aa9ba690cec4349899e6d0a8ef7957f609c4a8f05308473404507ae",
+    "unreadable": 0
+  },
+  "inputs_sha256": {
+    "d1_manifest": "3b0d59101d80ea08d240688ce33001c79ceae70f993fe10f71e6769fc4a21f2f",
+    "d1_relabel_map": "95f9387d3fcfd8fff7dbb86fdb2bbc79022d1c7766598ff0c497c145fca3dff2",
+    "compilation_key_table": "cefeaa765aa9ba690cec4349899e6d0a8ef7957f609c4a8f05308473404507ae",
+    "compilation_manifest": "f3bcf04b506d7135708d8da0af019f6c1d5f07a215897999493d0fbc634b5158",
+    "pool_file_list": "4539fdf55c6f15b4360d40f095755ba3b7799485e4bf15b3ecb4cd7c9406de19"
+  },
+  "match_rule": "exact content key (build_relabel_map.content_key): SHA-1 of the image size and its 8-bit grayscale bytes; insensitive to the file container, not to resizing",
+  "outputs_sha256": {
+    "d1_exact_matches": "59b1638ea7f821291d5c734c16a23824ef4fcb0fbcdf3ec60ca641a7e3f854f6",
+    "pool_a_keys": "9c2bd6fa9fcad48f9a7e793e1be5905cc141fa13aedc3abb5881ba7a0c2d6e60"
+  },
+  "pool": {
+    "file_list_rule": "SHA-256 of the sorted list of file paths relative to the pool folder, one per line, each followed by a newline (UTF-8); the list stays on the data host",
+    "file_list_sha256": "4539fdf55c6f15b4360d40f095755ba3b7799485e4bf15b3ecb4cd7c9406de19",
+    "files": 90557,
+    "label": "candidate training pool A: extended dataset train split, 90,557 files"
+  },
+  "pool_match": {
+    "exact": {
+      "images": 83629,
+      "per_source": {
+        "casia_ageing": 5095,
+        "casia_v5": 15365,
+        "crossmatch": 336,
+        "fvc2000": 184,
+        "fvc2002": 184,
+        "fvc2004": 192,
+        "livdet": 37560,
+        "polyu_cross": 2388,
+        "sd301": 2458,
+        "sd302": 19499,
+        "uareu": 368
+      }
+    },
+    "exact_ambiguous": {
+      "images": 25,
+      "keys": 11
+    },
+    "files": 90557,
+    "none": 6894,
+    "unreadable": 9
+  },
+  "provenance": {
+    "env": {
+      "git_sha": "a9276191928481f406074d4aee14c2f533fd504b",
+      "image": "canvec/exp:core",
+      "image_id": "sha256:de566b516b60a9a76ea5ef01cac06543d311cde00c478cf1ab773960714b91a6"
+    },
+    "imported_sha256": {
+      "build_relabel_map.py": "8b336d9ab5e588177ab46421451bd292a0af9e973fd3c1c57b82505d57c3f024",
+      "check_secondary_map.py": "901d02594e27875024e8234bea438d7fb03f5144f4a4221a41faa9f3136c9cb6",
+      "extract_d2.py": "74a744e5c8679299a9e8bfe647d7972cb7308282835a1bada1279307483001d3"
+    },
+    "script_sha256": "1c391809f5152026c76cf41c319a917650251962bc2c240ad2597b4d2217e670",
+    "software": {
+      "PIL": "13.0.0",
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "pyarrow": "26.0.0",
+      "python": "3.12.16"
+    }
+  },
+  "question": "worst case: the D1 encoders are assumed to have been trained on the whole of candidate training pool A",
+  "seconds": 13.4,
+  "thresholds": {
+    "rule": "exact content key equality; no numeric threshold"
+  }
+}

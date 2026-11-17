@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+build/
+dist/
+
+# OS
+.DS_Store
+
+# Biometric-derived data must never be committed
+*.npz
+*.npy
+*.pt
+*.pth
+*.pkl
+*.parquet
+
+# Locally regenerated tables (scripts/manuscript/make_numbers.py, make_tables.py)
+/manuscript/

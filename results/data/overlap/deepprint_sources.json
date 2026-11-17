@@ -1,0 +1,110 @@
+{
+  "d2_sources": {
+    "casia_ageing": {
+      "identities": 11,
+      "images": 330
+    },
+    "casia_v5": {
+      "identities": 2237,
+      "images": 11185
+    },
+    "crossmatch": {
+      "identities": 29,
+      "images": 232
+    },
+    "fvc2000": {
+      "identities": 18,
+      "images": 144
+    },
+    "fvc2002": {
+      "identities": 22,
+      "images": 176
+    },
+    "polyu_cross": {
+      "identities": 336,
+      "images": 2976
+    },
+    "sd301": {
+      "identities": 39,
+      "images": 375
+    },
+    "sd302": {
+      "identities": 413,
+      "images": 2795
+    },
+    "uareu": {
+      "identities": 35,
+      "images": 280
+    }
+  },
+  "data_source": "real: composition of the second corpus D2 from its extraction summary, and the folders of the compilation `real` image tree; no measurement",
+  "flx_documentation": "flx README, section 'Databases': the paper's models were trained on SFinGe synthetic fingerprints (6,000 subjects x 10 impressions; validation 2,000 x 4) and on MCYT330 optical and capacitive (first 2,000 subjects); the flx experiment definitions build DeepPrint_TexMinu with 2000 + 6000 training subjects, the configuration the released weights are loaded with (num_training_subjects=8000, num_dims=256)",
+  "flx_readme": {
+    "section": "Databases",
+    "sha256": "734491ff4991d513f7b29c74d2c068293d24a52be9d32f04fc1655a068f8c080",
+    "source": "README.md of the flx repository whose package directory the extraction image holds; the image itself contains no README",
+    "training_sets_named_in_section": [
+      "SFinGe synthetic",
+      "MCYT330"
+    ]
+  },
+  "flx_training_sets": [
+    "SFinGe synthetic",
+    "MCYT330"
+  ],
+  "compilation_fvc_databases": {
+    "FVC2000": [
+      "DB1_B",
+      "DB2_B",
+      "DB3_B"
+    ],
+    "FVC2002": [
+      "DB1_B",
+      "DB2_B",
+      "DB3_B"
+    ],
+    "FVC2004": [
+      "DB1_B",
+      "DB2_B",
+      "DB3_B"
+    ]
+  },
+  "compilation_fvc_statement": "compilation real part: FVC DB1-DB3 only; no SFinGe-generated DB4",
+  "compilation_manifest_db4_rows": {
+    "exclusion": {
+      "synthetic_source": 240
+    },
+    "rows": 240,
+    "with_file": 0,
+    "with_identity": 0
+  },
+  "inputs_sha256": {
+    "d2_extract_summary": "f9305fb576884ef368a952b8b0203aa9b850b26fdfe5e15252a67554e0e4cf42",
+    "d2_manifest": "5aca7a0b8d8274f73db1b188f9a606e1a7c98dd3d6b45f8052e92284b9e96335",
+    "flx_readme": "734491ff4991d513f7b29c74d2c068293d24a52be9d32f04fc1655a068f8c080"
+  },
+  "named_training_sets_among_d2_sources": [],
+  "pool": null,
+  "provenance": {
+    "env": {
+      "git_sha": "a9276191928481f406074d4aee14c2f533fd504b",
+      "image": "canvec/exp:core",
+      "image_id": "sha256:de566b516b60a9a76ea5ef01cac06543d311cde00c478cf1ab773960714b91a6"
+    },
+    "imported_sha256": {
+      "build_relabel_map.py": "8b336d9ab5e588177ab46421451bd292a0af9e973fd3c1c57b82505d57c3f024",
+      "check_secondary_map.py": "901d02594e27875024e8234bea438d7fb03f5144f4a4221a41faa9f3136c9cb6",
+      "extract_d2.py": "74a744e5c8679299a9e8bfe647d7972cb7308282835a1bada1279307483001d3"
+    },
+    "script_sha256": "1c391809f5152026c76cf41c319a917650251962bc2c240ad2597b4d2217e670",
+    "software": {
+      "PIL": "13.0.0",
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "pyarrow": "26.0.0",
+      "python": "3.12.16"
+    }
+  },
+  "statement": "The training sets named in the flx documentation (SFinGe synthetic, MCYT330) are not among the D2 sources.",
+  "thresholds": null
+}

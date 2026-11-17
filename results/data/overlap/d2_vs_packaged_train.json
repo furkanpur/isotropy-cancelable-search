@@ -1,0 +1,1426 @@
+{
+  "calibration": {
+    "d2_genuine": {
+      "by_source": {
+        "casia_ageing": {
+          "at_or_above_tau": 0,
+          "max": 0.9943973185207406,
+          "n": 4785,
+          "p99.9": 0.9907267009394398
+        },
+        "casia_v5": {
+          "at_or_above_tau": 0,
+          "max": 0.9921776209809654,
+          "n": 22370,
+          "p99.9": 0.9829634740507942
+        },
+        "crossmatch": {
+          "at_or_above_tau": 0,
+          "max": 0.9938923403167681,
+          "n": 812,
+          "p99.9": 0.9927489535117953
+        },
+        "fvc2000": {
+          "at_or_above_tau": 0,
+          "max": 0.9928749272952215,
+          "n": 504,
+          "p99.9": 0.9921185274552753
+        },
+        "fvc2002": {
+          "at_or_above_tau": 0,
+          "max": 0.9958644751159865,
+          "n": 616,
+          "p99.9": 0.9946271403924067
+        },
+        "polyu_cross": {
+          "at_or_above_tau": 2,
+          "max": 0.9983093343236139,
+          "n": 13200,
+          "p99.9": 0.9957055858718339
+        },
+        "sd301": {
+          "at_or_above_tau": 0,
+          "max": 0.9843062245332573,
+          "n": 1637,
+          "p99.9": 0.9823002223785975
+        },
+        "sd302": {
+          "at_or_above_tau": 0,
+          "max": 0.9789477009012464,
+          "n": 8196,
+          "p99.9": 0.9667528495234256
+        },
+        "uareu": {
+          "at_or_above_tau": 0,
+          "max": 0.9947943070087748,
+          "n": 980,
+          "p99.9": 0.9931208865965315
+        }
+      },
+      "definition": "every pair of D2 images of one finger (different impressions)",
+      "quantiles": {
+        "max": 0.9983093343236139,
+        "min": -0.12729577734375044,
+        "n": 53100,
+        "p0.1": -0.041695359746794884,
+        "p1": 0.034329680754676774,
+        "p5": 0.1855559321642727,
+        "p50": 0.7732733812586895,
+        "p95": 0.9811060939408354,
+        "p99": 0.9903914146604079,
+        "p99.9": 0.9944923402292157
+      }
+    },
+    "d2_impostor": {
+      "definition": "distinct pairs of D2 images of different fingers, drawn uniformly at random",
+      "quantiles": {
+        "max": 0.9781261138010984,
+        "min": -0.31274906945968534,
+        "n": 1000000,
+        "p0.1": -0.19504996618413925,
+        "p1": -0.1347952572685299,
+        "p5": -0.06914222335418325,
+        "p50": 0.21188678326233346,
+        "p95": 0.6714283559342145,
+        "p99": 0.8469416983953473,
+        "p99.9": 0.9384182969257613
+      },
+      "seed": 20261114
+    },
+    "pairs_at_or_above_thresholds": [
+      {
+        "genuine": {
+          "at_or_above": 472,
+          "fraction": 0.008888888888888889,
+          "n": 53100
+        },
+        "impostor": {
+          "at_or_above": 0,
+          "fraction": 0.0,
+          "n": 1000000,
+          "upper_95_per_pair": 2.9957277863525433e-06
+        },
+        "name": "positives p0.1",
+        "value": 0.9908113625358091
+      },
+      {
+        "genuine": {
+          "at_or_above": 54,
+          "fraction": 0.001016949152542373,
+          "n": 53100
+        },
+        "impostor": {
+          "at_or_above": 0,
+          "fraction": 0.0,
+          "n": 1000000,
+          "upper_95_per_pair": 2.9957277863525433e-06
+        },
+        "name": "D2 genuine p99.9",
+        "value": 0.9944923402292157
+      },
+      {
+        "genuine": {
+          "at_or_above": 2,
+          "fraction": 3.766478342749529e-05,
+          "n": 53100
+        },
+        "impostor": {
+          "at_or_above": 0,
+          "fraction": 0.0,
+          "n": 1000000,
+          "upper_95_per_pair": 2.9957277863525433e-06
+        },
+        "name": "tau = positives p1",
+        "value": 0.9972475611070859
+      },
+      {
+        "genuine": {
+          "at_or_above": 0,
+          "fraction": 0.0,
+          "n": 53100,
+          "upper_95_per_pair": 5.641521224714513e-05
+        },
+        "impostor": {
+          "at_or_above": 0,
+          "fraction": 0.0,
+          "n": 1000000,
+          "upper_95_per_pair": 2.9957277863525433e-06
+        },
+        "name": "positives p5",
+        "value": 0.9986724186787674
+      }
+    ],
+    "per_pair_bound": {
+      "method": "ijiss_btp.eval.stats.clopper_pearson_upper",
+      "note": "one-sided 95% Clopper-Pearson upper bound on the rate per pair, given only where no pair reaches the threshold; it is not the detector's per-image false-positive rate, because the detector takes the maximum over all pool embeddings",
+      "pool_embeddings": 51938
+    },
+    "positives": {
+      "by_source": {
+        "casia_ageing": {
+          "below_tau": 0,
+          "min": 0.9985723425074394,
+          "n": 326,
+          "p1": 0.9988073761879478,
+          "p50": 0.9994620405578317
+        },
+        "casia_v5": {
+          "below_tau": 0,
+          "min": 0.9982982439986212,
+          "n": 901,
+          "p1": 0.9986801887771442,
+          "p50": 0.9994516014766742
+        },
+        "fvc2000": {
+          "below_tau": 0,
+          "min": 0.9987594018375638,
+          "n": 4,
+          "p1": 0.9987634935583962,
+          "p50": 0.9990314453915965
+        },
+        "fvc2002": {
+          "below_tau": 0,
+          "min": 0.9988788067516492,
+          "n": 14,
+          "p1": 0.9988848688880125,
+          "p50": 0.9994833276757462
+        },
+        "fvc2004": {
+          "below_tau": 0,
+          "min": 0.9993750139813443,
+          "n": 3,
+          "p1": 0.9993767309984259,
+          "p50": 0.9994608648354277
+        },
+        "sd301": {
+          "below_tau": 7,
+          "min": 0.9906831434476249,
+          "n": 83,
+          "p1": 0.9938691935176588,
+          "p50": 0.999601851207449
+        },
+        "sd302": {
+          "below_tau": 14,
+          "min": 0.9880537013981222,
+          "n": 666,
+          "p1": 0.9962465430720403,
+          "p50": 0.9994426115233062
+        },
+        "uareu": {
+          "below_tau": 0,
+          "min": 0.9992061581165647,
+          "n": 37,
+          "p1": 0.9992406861938399,
+          "p50": 0.9996249564870239
+        }
+      },
+      "by_source_rule": "compilation source of the original; below_tau counts cosines under tau",
+      "crosscheck_d2_embeddings": {
+        "description": "original side embedded now against its stored D2 embedding",
+        "quantiles": {
+          "max": 1.0000000000000004,
+          "min": 0.9999999999999998,
+          "n": 596,
+          "p0.1": 0.9999999999999998,
+          "p1": 0.9999999999999998,
+          "p5": 0.9999999999999999,
+          "p50": 1.0,
+          "p95": 1.0000000000000002,
+          "p99": 1.0000000000000004,
+          "p99.9": 1.0000000000000004
+        }
+      },
+      "crosscheck_stored_features": {
+        "description": "packaged side embedded now against the features stored for it",
+        "quantiles": {
+          "max": 1.0,
+          "min": 0.9999999999999993,
+          "n": 1735,
+          "p0.1": 0.9999999999999994,
+          "p1": 0.9999999999999996,
+          "p5": 0.9999999999999996,
+          "p50": 0.9999999999999998,
+          "p95": 0.9999999999999999,
+          "p99": 1.0,
+          "p99.9": 1.0
+        }
+      },
+      "definition": "an old test image (packaged 224 x 224 RGB, like pool B) whose coarse key occurs on exactly one compilation file (every MANIFEST path with a file, labelled or not), paired with that file, taken as its original; both sides embedded now with encode_fingervit, as pool B and D2 are",
+      "originals_in_d2": 596,
+      "quantiles": {
+        "max": 0.9999901710115705,
+        "min": 0.9880537013981222,
+        "n": 2034,
+        "p0.1": 0.9908113625358091,
+        "p1": 0.9972475611070859,
+        "p5": 0.9986724186787674,
+        "p50": 0.9994572421809698,
+        "p95": 0.9997725265107408,
+        "p99": 0.999937424143421,
+        "p99.9": 0.9999822468897573
+      },
+      "selection": {
+        "ambiguous_excluded": 45,
+        "old_test_images": 12863,
+        "originals_labelled": 1997,
+        "pairs": 2034,
+        "unique": 2034,
+        "unmatched": 10784,
+        "unreadable": 0
+      }
+    },
+    "quantile_method": "numpy.percentile, linear interpolation"
+  },
+  "coarse_rule": "coarse key: PIL convert('L'), resize to 16 x 16 with Image.BILINEAR, uint8 values shifted right by 4 bits, SHA-1 of the 256 bytes",
+  "d1_vs_pool": {
+    "by_threshold": [
+      {
+        "fingers": {
+          "above": 3239,
+          "fraction": 0.876827,
+          "of": 3694,
+          "per_source": {
+            "casia_ageing": {
+              "above": 185,
+              "fraction": 1.0,
+              "of": 185
+            },
+            "casia_v5": {
+              "above": 1320,
+              "fraction": 0.801457,
+              "of": 1647
+            },
+            "crossmatch": {
+              "above": 19,
+              "fraction": 0.863636,
+              "of": 22
+            },
+            "fvc2000": {
+              "above": 10,
+              "fraction": 0.833333,
+              "of": 12
+            },
+            "fvc2002": {
+              "above": 5,
+              "fraction": 0.625,
+              "of": 8
+            },
+            "fvc2004": {
+              "above": 9,
+              "fraction": 0.9,
+              "of": 10
+            },
+            "sd301": {
+              "above": 189,
+              "fraction": 0.940299,
+              "of": 201
+            },
+            "sd302": {
+              "above": 1481,
+              "fraction": 0.937935,
+              "of": 1579
+            },
+            "uareu": {
+              "above": 21,
+              "fraction": 0.7,
+              "of": 30
+            }
+          }
+        },
+        "images": {
+          "above": 8405,
+          "fraction": 0.821362,
+          "of": 10233,
+          "per_source": {
+            "casia_ageing": {
+              "above": 1298,
+              "fraction": 0.829393,
+              "of": 1565
+            },
+            "casia_v5": {
+              "above": 3960,
+              "fraction": 0.801457,
+              "of": 4941
+            },
+            "crossmatch": {
+              "above": 57,
+              "fraction": 0.863636,
+              "of": 66
+            },
+            "fvc2000": {
+              "above": 30,
+              "fraction": 0.833333,
+              "of": 36
+            },
+            "fvc2002": {
+              "above": 15,
+              "fraction": 0.625,
+              "of": 24
+            },
+            "fvc2004": {
+              "above": 27,
+              "fraction": 0.9,
+              "of": 30
+            },
+            "sd301": {
+              "above": 387,
+              "fraction": 0.850549,
+              "of": 455
+            },
+            "sd302": {
+              "above": 2568,
+              "fraction": 0.848645,
+              "of": 3026
+            },
+            "uareu": {
+              "above": 63,
+              "fraction": 0.7,
+              "of": 90
+            }
+          }
+        },
+        "name": "positives p0.1",
+        "value": 0.9908113625358091
+      },
+      {
+        "fingers": {
+          "above": 3227,
+          "fraction": 0.873579,
+          "of": 3694,
+          "per_source": {
+            "casia_ageing": {
+              "above": 185,
+              "fraction": 1.0,
+              "of": 185
+            },
+            "casia_v5": {
+              "above": 1320,
+              "fraction": 0.801457,
+              "of": 1647
+            },
+            "crossmatch": {
+              "above": 19,
+              "fraction": 0.863636,
+              "of": 22
+            },
+            "fvc2000": {
+              "above": 10,
+              "fraction": 0.833333,
+              "of": 12
+            },
+            "fvc2002": {
+              "above": 5,
+              "fraction": 0.625,
+              "of": 8
+            },
+            "fvc2004": {
+              "above": 9,
+              "fraction": 0.9,
+              "of": 10
+            },
+            "sd301": {
+              "above": 187,
+              "fraction": 0.930348,
+              "of": 201
+            },
+            "sd302": {
+              "above": 1471,
+              "fraction": 0.931602,
+              "of": 1579
+            },
+            "uareu": {
+              "above": 21,
+              "fraction": 0.7,
+              "of": 30
+            }
+          }
+        },
+        "images": {
+          "above": 8342,
+          "fraction": 0.815206,
+          "of": 10233,
+          "per_source": {
+            "casia_ageing": {
+              "above": 1296,
+              "fraction": 0.828115,
+              "of": 1565
+            },
+            "casia_v5": {
+              "above": 3960,
+              "fraction": 0.801457,
+              "of": 4941
+            },
+            "crossmatch": {
+              "above": 57,
+              "fraction": 0.863636,
+              "of": 66
+            },
+            "fvc2000": {
+              "above": 30,
+              "fraction": 0.833333,
+              "of": 36
+            },
+            "fvc2002": {
+              "above": 15,
+              "fraction": 0.625,
+              "of": 24
+            },
+            "fvc2004": {
+              "above": 27,
+              "fraction": 0.9,
+              "of": 30
+            },
+            "sd301": {
+              "above": 377,
+              "fraction": 0.828571,
+              "of": 455
+            },
+            "sd302": {
+              "above": 2517,
+              "fraction": 0.831791,
+              "of": 3026
+            },
+            "uareu": {
+              "above": 63,
+              "fraction": 0.7,
+              "of": 90
+            }
+          }
+        },
+        "name": "D2 genuine p99.9",
+        "value": 0.9944923402292157
+      },
+      {
+        "fingers": {
+          "above": 3130,
+          "fraction": 0.84732,
+          "of": 3694,
+          "per_source": {
+            "casia_ageing": {
+              "above": 185,
+              "fraction": 1.0,
+              "of": 185
+            },
+            "casia_v5": {
+              "above": 1320,
+              "fraction": 0.801457,
+              "of": 1647
+            },
+            "crossmatch": {
+              "above": 19,
+              "fraction": 0.863636,
+              "of": 22
+            },
+            "fvc2000": {
+              "above": 10,
+              "fraction": 0.833333,
+              "of": 12
+            },
+            "fvc2002": {
+              "above": 5,
+              "fraction": 0.625,
+              "of": 8
+            },
+            "fvc2004": {
+              "above": 9,
+              "fraction": 0.9,
+              "of": 10
+            },
+            "sd301": {
+              "above": 172,
+              "fraction": 0.855721,
+              "of": 201
+            },
+            "sd302": {
+              "above": 1389,
+              "fraction": 0.879671,
+              "of": 1579
+            },
+            "uareu": {
+              "above": 21,
+              "fraction": 0.7,
+              "of": 30
+            }
+          }
+        },
+        "images": {
+          "above": 8017,
+          "fraction": 0.783446,
+          "of": 10233,
+          "per_source": {
+            "casia_ageing": {
+              "above": 1296,
+              "fraction": 0.828115,
+              "of": 1565
+            },
+            "casia_v5": {
+              "above": 3958,
+              "fraction": 0.801052,
+              "of": 4941
+            },
+            "crossmatch": {
+              "above": 57,
+              "fraction": 0.863636,
+              "of": 66
+            },
+            "fvc2000": {
+              "above": 30,
+              "fraction": 0.833333,
+              "of": 36
+            },
+            "fvc2002": {
+              "above": 15,
+              "fraction": 0.625,
+              "of": 24
+            },
+            "fvc2004": {
+              "above": 27,
+              "fraction": 0.9,
+              "of": 30
+            },
+            "sd301": {
+              "above": 324,
+              "fraction": 0.712088,
+              "of": 455
+            },
+            "sd302": {
+              "above": 2247,
+              "fraction": 0.742564,
+              "of": 3026
+            },
+            "uareu": {
+              "above": 63,
+              "fraction": 0.7,
+              "of": 90
+            }
+          }
+        },
+        "name": "tau = positives p1",
+        "value": 0.9972475611070859
+      },
+      {
+        "fingers": {
+          "above": 2926,
+          "fraction": 0.792095,
+          "of": 3694,
+          "per_source": {
+            "casia_ageing": {
+              "above": 185,
+              "fraction": 1.0,
+              "of": 185
+            },
+            "casia_v5": {
+              "above": 1318,
+              "fraction": 0.800243,
+              "of": 1647
+            },
+            "crossmatch": {
+              "above": 19,
+              "fraction": 0.863636,
+              "of": 22
+            },
+            "fvc2000": {
+              "above": 10,
+              "fraction": 0.833333,
+              "of": 12
+            },
+            "fvc2002": {
+              "above": 5,
+              "fraction": 0.625,
+              "of": 8
+            },
+            "fvc2004": {
+              "above": 9,
+              "fraction": 0.9,
+              "of": 10
+            },
+            "sd301": {
+              "above": 157,
+              "fraction": 0.781095,
+              "of": 201
+            },
+            "sd302": {
+              "above": 1202,
+              "fraction": 0.761241,
+              "of": 1579
+            },
+            "uareu": {
+              "above": 21,
+              "fraction": 0.7,
+              "of": 30
+            }
+          }
+        },
+        "images": {
+          "above": 7412,
+          "fraction": 0.724323,
+          "of": 10233,
+          "per_source": {
+            "casia_ageing": {
+              "above": 1280,
+              "fraction": 0.817891,
+              "of": 1565
+            },
+            "casia_v5": {
+              "above": 3921,
+              "fraction": 0.793564,
+              "of": 4941
+            },
+            "crossmatch": {
+              "above": 43,
+              "fraction": 0.651515,
+              "of": 66
+            },
+            "fvc2000": {
+              "above": 26,
+              "fraction": 0.722222,
+              "of": 36
+            },
+            "fvc2002": {
+              "above": 15,
+              "fraction": 0.625,
+              "of": 24
+            },
+            "fvc2004": {
+              "above": 27,
+              "fraction": 0.9,
+              "of": 30
+            },
+            "sd301": {
+              "above": 263,
+              "fraction": 0.578022,
+              "of": 455
+            },
+            "sd302": {
+              "above": 1774,
+              "fraction": 0.586252,
+              "of": 3026
+            },
+            "uareu": {
+              "above": 63,
+              "fraction": 0.7,
+              "of": 90
+            }
+          }
+        },
+        "name": "positives p5",
+        "value": 0.9986724186787674
+      }
+    ],
+    "d1": {
+      "identities": 3694,
+      "manifest_images": 10359,
+      "relabel_map_rows": 10233,
+      "unassigned_images": 126
+    },
+    "description": "optional: first-corpus images against pool B with the same detector and thresholds (only the D1 images needed a new extraction)",
+    "unassigned": {
+      "at_or_above_tau": 102,
+      "images": 126
+    }
+  },
+  "d2": {
+    "by_threshold": [
+      {
+        "fingers": {
+          "above": 2633,
+          "fraction": 0.838535,
+          "of": 3140,
+          "per_source": {
+            "casia_ageing": {
+              "above": 11,
+              "fraction": 1.0,
+              "of": 11
+            },
+            "casia_v5": {
+              "above": 1802,
+              "fraction": 0.805543,
+              "of": 2237
+            },
+            "crossmatch": {
+              "above": 23,
+              "fraction": 0.793103,
+              "of": 29
+            },
+            "fvc2000": {
+              "above": 16,
+              "fraction": 0.888889,
+              "of": 18
+            },
+            "fvc2002": {
+              "above": 19,
+              "fraction": 0.863636,
+              "of": 22
+            },
+            "polyu_cross": {
+              "above": 278,
+              "fraction": 0.827381,
+              "of": 336
+            },
+            "sd301": {
+              "above": 39,
+              "fraction": 1.0,
+              "of": 39
+            },
+            "sd302": {
+              "above": 413,
+              "fraction": 1.0,
+              "of": 413
+            },
+            "uareu": {
+              "above": 32,
+              "fraction": 0.914286,
+              "of": 35
+            }
+          }
+        },
+        "images": {
+          "above": 14983,
+          "fraction": 0.810198,
+          "of": 18493,
+          "per_source": {
+            "casia_ageing": {
+              "above": 274,
+              "fraction": 0.830303,
+              "of": 330
+            },
+            "casia_v5": {
+              "above": 9010,
+              "fraction": 0.805543,
+              "of": 11185
+            },
+            "crossmatch": {
+              "above": 184,
+              "fraction": 0.793103,
+              "of": 232
+            },
+            "fvc2000": {
+              "above": 128,
+              "fraction": 0.888889,
+              "of": 144
+            },
+            "fvc2002": {
+              "above": 152,
+              "fraction": 0.863636,
+              "of": 176
+            },
+            "polyu_cross": {
+              "above": 2244,
+              "fraction": 0.754032,
+              "of": 2976
+            },
+            "sd301": {
+              "above": 323,
+              "fraction": 0.861333,
+              "of": 375
+            },
+            "sd302": {
+              "above": 2412,
+              "fraction": 0.86297,
+              "of": 2795
+            },
+            "uareu": {
+              "above": 256,
+              "fraction": 0.914286,
+              "of": 280
+            }
+          }
+        },
+        "name": "positives p0.1",
+        "value": 0.9908113625358091
+      },
+      {
+        "fingers": {
+          "above": 2633,
+          "fraction": 0.838535,
+          "of": 3140,
+          "per_source": {
+            "casia_ageing": {
+              "above": 11,
+              "fraction": 1.0,
+              "of": 11
+            },
+            "casia_v5": {
+              "above": 1802,
+              "fraction": 0.805543,
+              "of": 2237
+            },
+            "crossmatch": {
+              "above": 23,
+              "fraction": 0.793103,
+              "of": 29
+            },
+            "fvc2000": {
+              "above": 16,
+              "fraction": 0.888889,
+              "of": 18
+            },
+            "fvc2002": {
+              "above": 19,
+              "fraction": 0.863636,
+              "of": 22
+            },
+            "polyu_cross": {
+              "above": 278,
+              "fraction": 0.827381,
+              "of": 336
+            },
+            "sd301": {
+              "above": 39,
+              "fraction": 1.0,
+              "of": 39
+            },
+            "sd302": {
+              "above": 413,
+              "fraction": 1.0,
+              "of": 413
+            },
+            "uareu": {
+              "above": 32,
+              "fraction": 0.914286,
+              "of": 35
+            }
+          }
+        },
+        "images": {
+          "above": 14891,
+          "fraction": 0.805224,
+          "of": 18493,
+          "per_source": {
+            "casia_ageing": {
+              "above": 273,
+              "fraction": 0.827273,
+              "of": 330
+            },
+            "casia_v5": {
+              "above": 9010,
+              "fraction": 0.805543,
+              "of": 11185
+            },
+            "crossmatch": {
+              "above": 184,
+              "fraction": 0.793103,
+              "of": 232
+            },
+            "fvc2000": {
+              "above": 126,
+              "fraction": 0.875,
+              "of": 144
+            },
+            "fvc2002": {
+              "above": 152,
+              "fraction": 0.863636,
+              "of": 176
+            },
+            "polyu_cross": {
+              "above": 2244,
+              "fraction": 0.754032,
+              "of": 2976
+            },
+            "sd301": {
+              "above": 310,
+              "fraction": 0.826667,
+              "of": 375
+            },
+            "sd302": {
+              "above": 2336,
+              "fraction": 0.835778,
+              "of": 2795
+            },
+            "uareu": {
+              "above": 256,
+              "fraction": 0.914286,
+              "of": 280
+            }
+          }
+        },
+        "name": "D2 genuine p99.9",
+        "value": 0.9944923402292157
+      },
+      {
+        "fingers": {
+          "above": 2633,
+          "fraction": 0.838535,
+          "of": 3140,
+          "per_source": {
+            "casia_ageing": {
+              "above": 11,
+              "fraction": 1.0,
+              "of": 11
+            },
+            "casia_v5": {
+              "above": 1802,
+              "fraction": 0.805543,
+              "of": 2237
+            },
+            "crossmatch": {
+              "above": 23,
+              "fraction": 0.793103,
+              "of": 29
+            },
+            "fvc2000": {
+              "above": 16,
+              "fraction": 0.888889,
+              "of": 18
+            },
+            "fvc2002": {
+              "above": 19,
+              "fraction": 0.863636,
+              "of": 22
+            },
+            "polyu_cross": {
+              "above": 278,
+              "fraction": 0.827381,
+              "of": 336
+            },
+            "sd301": {
+              "above": 39,
+              "fraction": 1.0,
+              "of": 39
+            },
+            "sd302": {
+              "above": 413,
+              "fraction": 1.0,
+              "of": 413
+            },
+            "uareu": {
+              "above": 32,
+              "fraction": 0.914286,
+              "of": 35
+            }
+          }
+        },
+        "images": {
+          "above": 14332,
+          "fraction": 0.774996,
+          "of": 18493,
+          "per_source": {
+            "casia_ageing": {
+              "above": 273,
+              "fraction": 0.827273,
+              "of": 330
+            },
+            "casia_v5": {
+              "above": 9006,
+              "fraction": 0.805186,
+              "of": 11185
+            },
+            "crossmatch": {
+              "above": 180,
+              "fraction": 0.775862,
+              "of": 232
+            },
+            "fvc2000": {
+              "above": 122,
+              "fraction": 0.847222,
+              "of": 144
+            },
+            "fvc2002": {
+              "above": 152,
+              "fraction": 0.863636,
+              "of": 176
+            },
+            "polyu_cross": {
+              "above": 2237,
+              "fraction": 0.75168,
+              "of": 2976
+            },
+            "sd301": {
+              "above": 257,
+              "fraction": 0.685333,
+              "of": 375
+            },
+            "sd302": {
+              "above": 1849,
+              "fraction": 0.661538,
+              "of": 2795
+            },
+            "uareu": {
+              "above": 256,
+              "fraction": 0.914286,
+              "of": 280
+            }
+          }
+        },
+        "name": "tau = positives p1",
+        "value": 0.9972475611070859
+      },
+      {
+        "fingers": {
+          "above": 2627,
+          "fraction": 0.836624,
+          "of": 3140,
+          "per_source": {
+            "casia_ageing": {
+              "above": 11,
+              "fraction": 1.0,
+              "of": 11
+            },
+            "casia_v5": {
+              "above": 1802,
+              "fraction": 0.805543,
+              "of": 2237
+            },
+            "crossmatch": {
+              "above": 23,
+              "fraction": 0.793103,
+              "of": 29
+            },
+            "fvc2000": {
+              "above": 15,
+              "fraction": 0.833333,
+              "of": 18
+            },
+            "fvc2002": {
+              "above": 19,
+              "fraction": 0.863636,
+              "of": 22
+            },
+            "polyu_cross": {
+              "above": 278,
+              "fraction": 0.827381,
+              "of": 336
+            },
+            "sd301": {
+              "above": 39,
+              "fraction": 1.0,
+              "of": 39
+            },
+            "sd302": {
+              "above": 408,
+              "fraction": 0.987893,
+              "of": 413
+            },
+            "uareu": {
+              "above": 32,
+              "fraction": 0.914286,
+              "of": 35
+            }
+          }
+        },
+        "images": {
+          "above": 13295,
+          "fraction": 0.718921,
+          "of": 18493,
+          "per_source": {
+            "casia_ageing": {
+              "above": 269,
+              "fraction": 0.815152,
+              "of": 330
+            },
+            "casia_v5": {
+              "above": 8948,
+              "fraction": 0.8,
+              "of": 11185
+            },
+            "crossmatch": {
+              "above": 140,
+              "fraction": 0.603448,
+              "of": 232
+            },
+            "fvc2000": {
+              "above": 97,
+              "fraction": 0.673611,
+              "of": 144
+            },
+            "fvc2002": {
+              "above": 149,
+              "fraction": 0.846591,
+              "of": 176
+            },
+            "polyu_cross": {
+              "above": 2084,
+              "fraction": 0.700269,
+              "of": 2976
+            },
+            "sd301": {
+              "above": 187,
+              "fraction": 0.498667,
+              "of": 375
+            },
+            "sd302": {
+              "above": 1165,
+              "fraction": 0.416816,
+              "of": 2795
+            },
+            "uareu": {
+              "above": 256,
+              "fraction": 0.914286,
+              "of": 280
+            }
+          }
+        },
+        "name": "positives p5",
+        "value": 0.9986724186787674
+      }
+    ],
+    "finger_rule": "a D2 finger counts when at least one of its D2 images counts",
+    "fingers": 3140,
+    "images": 18493,
+    "maxima": "float64 (both sides upcast before the maximum, like the calibration cosines)"
+  },
+  "d2_coarse_copy_check": {
+    "at_or_above_tau": 2602,
+    "by_source": {
+      "casia_ageing": {
+        "at_or_above_tau": 80,
+        "copies": 80,
+        "fraction": 1.0
+      },
+      "casia_v5": {
+        "at_or_above_tau": 2093,
+        "copies": 2095,
+        "fraction": 0.999045
+      },
+      "crossmatch": {
+        "at_or_above_tau": 0,
+        "copies": 0,
+        "fraction": null
+      },
+      "fvc2000": {
+        "at_or_above_tau": 29,
+        "copies": 31,
+        "fraction": 0.935484
+      },
+      "fvc2002": {
+        "at_or_above_tau": 37,
+        "copies": 37,
+        "fraction": 1.0
+      },
+      "polyu_cross": {
+        "at_or_above_tau": 1,
+        "copies": 1,
+        "fraction": 1.0
+      },
+      "sd301": {
+        "at_or_above_tau": 44,
+        "copies": 49,
+        "fraction": 0.897959
+      },
+      "sd302": {
+        "at_or_above_tau": 229,
+        "copies": 240,
+        "fraction": 0.954167
+      },
+      "uareu": {
+        "at_or_above_tau": 89,
+        "copies": 89,
+        "fraction": 1.0
+      }
+    },
+    "d2_images_with_a_coarse_copy_in_pool": 2622,
+    "definition": "D2 images whose coarse key is on no other compilation file and occurs in the pool, so that a pool image is very likely a re-encoded copy; these copies are selected by the same coarse key as the calibration positives, so the check measures recall only for copies whose coarse key survived packaging and says nothing about recall for copies the coarse key misses",
+    "fraction": 0.992372,
+    "min_max_cosine": 0.9867717031495369
+  },
+  "data_source": "real: candidate training pool B (packaged 224 x 224 RGB images), the second corpus D2 (compilation `real` images, internal research corpus of real fingerprint images), old test images packaged like pool B with their compilation originals (calibration) and the first-corpus (D1) images; finger-vit embeddings; no synthetic data",
+  "detector": "maximum cosine of each image's finger-vit embedding to any pool image's; an image counts at a threshold when that maximum is at least the threshold. The detector targets re-encoded copies of the corpus images; other impressions of a finger in the pool are expected to score like genuine pairs, of which at most 0.1% reach a separable tau",
+  "extraction": {
+    "batch_size": 1,
+    "code": {
+      "docker/Dockerfile.extract": "6bd0d33e8b7f97d1677aae3c0920fac6893bb7fea2d32643591f8d8d86f19bf6",
+      "docker/requirements-extract.txt": "79c01206683c3a70a9bd6d84a5d3f2939bf56f203a723cbfebde9e0f7bf8c411",
+      "extract_d2.py": "74a744e5c8679299a9e8bfe647d7972cb7308282835a1bada1279307483001d3"
+    },
+    "env": {
+      "git_sha": "7d47fa826d1117b9564b0e23864752b1751b8a4d",
+      "image": "canvec/extract:gpu",
+      "image_id": "sha256:be5673c663cfcee9fac6b41656bf97085caa15d36b91d9a2efd3b299f1e28d0d"
+    },
+    "loader_workers": 16,
+    "preprocessing": "PIL Image.open(path).convert('RGB'); torchvision Resize((224, 224)), ToTensor, Normalize(mean=[0.761, 0.760, 0.760], std=[0.287, 0.287, 0.288]); AutoModel.from_pretrained(finger-vit_giant), eval, no_grad; feature = last_hidden_state[:, 0] (CLS)",
+    "rows": {
+      "d1": 10359,
+      "pair_original": 2034,
+      "pair_packaged": 2034,
+      "pool": 51938
+    },
+    "seconds": 1642.6,
+    "software": {
+      "PIL": "12.0.0",
+      "cuda_runtime": "12.8",
+      "cudnn": 91002,
+      "cudnn_allow_tf32": true,
+      "cv2": "4.11.0",
+      "flx_tree_sha256": "996928fba5c14a8538323d9cf0ddf9ac554c7cc9cc8614def289f261125a3701",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "huggingface_hub": "0.35.3",
+      "matmul_allow_tf32": false,
+      "numpy": "2.2.6",
+      "nvidia_driver": "595.99.02",
+      "pandas": "2.3.3",
+      "pyarrow": "21.0.0",
+      "python": "3.12.3",
+      "safetensors": "0.6.2",
+      "tokenizers": "0.22.1",
+      "torch": "2.9.0+cu128",
+      "torchmetrics": "1.8.2",
+      "torchvision": "0.24.0+cu128",
+      "transformers": "4.57.1"
+    },
+    "weights_sha256": {
+      "finger-vit_giant/config.json": "5eeefae61674737a7c1b7a20486d63a39f5b4f2c27cadc3f975596cda18e9930",
+      "finger-vit_giant/model.safetensors": "d386f7acae9289c075ccf3560976a3e2519da13d82cecb6aa72a0d490d208fc2"
+    }
+  },
+  "compilation_reference": {
+    "coarse_keys_on_several_files": 1757,
+    "distinct_coarse_keys": 105063,
+    "files": 106901,
+    "manifest_rows": 261437,
+    "unreadable": 0
+  },
+  "inputs_sha256": {
+    "calibration_pairs": "5088cc33901dae56d5d0dee942b97ffff20184201aaded75b813f52a8732f6ce",
+    "d1_manifest": "3b0d59101d80ea08d240688ce33001c79ceae70f993fe10f71e6769fc4a21f2f",
+    "d1_relabel_map": "95f9387d3fcfd8fff7dbb86fdb2bbc79022d1c7766598ff0c497c145fca3dff2",
+    "d2_emb_fingervit": "1929e8f430d9c69025288124ee35d30a4d2f2b229ddc49b73867cd640692eb46",
+    "d2_extract_summary": "f9305fb576884ef368a952b8b0203aa9b850b26fdfe5e15252a67554e0e4cf42",
+    "d2_manifest": "5aca7a0b8d8274f73db1b188f9a606e1a7c98dd3d6b45f8052e92284b9e96335",
+    "emb_d1": "d6e1bb01e3ed6515588f3b5694fa4a7244b58f53ee02f880f550bb06246c3cb7",
+    "emb_pair_original": "ab36fbb2998956e70470ecb1569680fe4246c05319a90f9b87fdd9c4baf31f32",
+    "emb_pair_packaged": "24b65746b43e451b15d91ba6c74d2a22e59a8d69e33198497ae6ad3e8ab19d39",
+    "emb_pool": "82475f03e20320866ac2a99fa8e12b67ea25e34e960d07af92a47499dae96059",
+    "compilation_coarse_keys": "cb40ef5fa64baf621b14362d6a1b6e04d40814887fca5b6b0befd0bdf5239400",
+    "compilation_key_table": "cefeaa765aa9ba690cec4349899e6d0a8ef7957f609c4a8f05308473404507ae",
+    "compilation_manifest": "f3bcf04b506d7135708d8da0af019f6c1d5f07a215897999493d0fbc634b5158",
+    "old_fingervit_features": "c66dbe6222838de7cda3e3bbb92f78b19ea23ffc03e0e423dc611fc7874f4e85",
+    "old_test_file_list": "a05c8055460f346821a735733bcd5843fd8eb9398cfdf6c8d86d919f5e8dc1b7",
+    "pool_coarse_keys": "3d6101a7b6c80f10b4d728cea126e645be744b30b92ccae4b22b514ea3de8cf3",
+    "pool_embedded_list": "6afb54257e1c191077c4f22a36b642fadc21f99f0112197fddc484018063c866",
+    "pool_file_list": "6afb54257e1c191077c4f22a36b642fadc21f99f0112197fddc484018063c866"
+  },
+  "pool": {
+    "embedded": 51938,
+    "file_list_rule": "SHA-256 of the sorted list of file paths relative to the pool folder, one per line, each followed by a newline (UTF-8); the list stays on the data host",
+    "file_list_sha256": "6afb54257e1c191077c4f22a36b642fadc21f99f0112197fddc484018063c866",
+    "files": 51938,
+    "label": "candidate training pool B: packaged benchmark train split, 51,938 files"
+  },
+  "pool_match_to_compilation": {
+    "coarse_ambiguous": 204,
+    "coarse_unique": {
+      "images": 8727,
+      "per_source": {
+        "casia_ageing": 1400,
+        "casia_v5": 3628,
+        "fvc2000": 51,
+        "fvc2002": 50,
+        "fvc2004": 23,
+        "polyu_cross": 1,
+        "sd301": 450,
+        "sd302": 2989,
+        "uareu": 135
+      }
+    },
+    "exact": 0,
+    "files": 51938,
+    "none": 43007,
+    "unreadable": 0
+  },
+  "provenance": {
+    "coarse": {
+      "env": {
+        "git_sha": "7d47fa826d1117b9564b0e23864752b1751b8a4d",
+        "image": "canvec/exp:core",
+        "image_id": "sha256:de566b516b60a9a76ea5ef01cac06543d311cde00c478cf1ab773960714b91a6"
+      },
+      "imported_sha256": {
+        "build_relabel_map.py": "8b336d9ab5e588177ab46421451bd292a0af9e973fd3c1c57b82505d57c3f024",
+        "check_secondary_map.py": "901d02594e27875024e8234bea438d7fb03f5144f4a4221a41faa9f3136c9cb6",
+        "extract_d2.py": "74a744e5c8679299a9e8bfe647d7972cb7308282835a1bada1279307483001d3"
+      },
+      "script_sha256": "33baeb91536323190fd4edbab5d8fcb220ee65b7fad7fb989224e851415dda6c",
+      "software": {
+        "PIL": "13.0.0",
+        "numpy": "2.5.4",
+        "pandas": "3.1.0",
+        "pyarrow": "26.0.0",
+        "python": "3.12.16"
+      }
+    },
+    "embed": {
+      "env": {
+        "git_sha": "7d47fa826d1117b9564b0e23864752b1751b8a4d",
+        "image": "canvec/extract:gpu",
+        "image_id": "sha256:be5673c663cfcee9fac6b41656bf97085caa15d36b91d9a2efd3b299f1e28d0d"
+      },
+      "imported_sha256": {
+        "build_relabel_map.py": "8b336d9ab5e588177ab46421451bd292a0af9e973fd3c1c57b82505d57c3f024",
+        "check_secondary_map.py": "901d02594e27875024e8234bea438d7fb03f5144f4a4221a41faa9f3136c9cb6",
+        "extract_d2.py": "74a744e5c8679299a9e8bfe647d7972cb7308282835a1bada1279307483001d3"
+      },
+      "script_sha256": "33baeb91536323190fd4edbab5d8fcb220ee65b7fad7fb989224e851415dda6c",
+      "software": {
+        "PIL": "12.0.0",
+        "numpy": "2.2.6",
+        "pandas": "2.3.3",
+        "pyarrow": "21.0.0",
+        "python": "3.12.3"
+      }
+    },
+    "measure": {
+      "env": {
+        "git_sha": "a9276191928481f406074d4aee14c2f533fd504b",
+        "image": "canvec/exp:core",
+        "image_id": "sha256:de566b516b60a9a76ea5ef01cac06543d311cde00c478cf1ab773960714b91a6"
+      },
+      "imported_sha256": {
+        "build_relabel_map.py": "8b336d9ab5e588177ab46421451bd292a0af9e973fd3c1c57b82505d57c3f024",
+        "check_secondary_map.py": "901d02594e27875024e8234bea438d7fb03f5144f4a4221a41faa9f3136c9cb6",
+        "extract_d2.py": "74a744e5c8679299a9e8bfe647d7972cb7308282835a1bada1279307483001d3"
+      },
+      "script_sha256": "1c391809f5152026c76cf41c319a917650251962bc2c240ad2597b4d2217e670",
+      "software": {
+        "PIL": "13.0.0",
+        "numpy": "2.5.4",
+        "pandas": "3.1.0",
+        "pyarrow": "26.0.0",
+        "python": "3.12.16"
+      }
+    }
+  },
+  "provenance_chain": {
+    "checked": [
+      "calibration_pairs",
+      "emb_d1",
+      "emb_pair_original",
+      "emb_pair_packaged",
+      "emb_pool",
+      "compilation_manifest",
+      "pool_file_list"
+    ],
+    "embedding_step_recorded_its_inputs": false,
+    "problems": []
+  },
+  "question": "worst case: finger-vit is assumed to have been trained on the whole of candidate training pool B",
+  "seconds": {
+    "coarse": 14.2,
+    "embed": 1642.6,
+    "measure": 13.1
+  },
+  "tau_rule": {
+    "d2_genuine_p99.9": 0.9944923402292157,
+    "rule": "tau = 1st percentile of the calibration pairs' cosines, used only if it exceeds the 99.9th percentile of the D2 genuine pairs (separable); otherwise the overlap is reported at several thresholds and flagged as not separable",
+    "separable": true,
+    "tau": 0.9972475611070859
+  },
+  "thresholds": [
+    {
+      "name": "positives p0.1",
+      "value": 0.9908113625358091
+    },
+    {
+      "name": "D2 genuine p99.9",
+      "value": 0.9944923402292157
+    },
+    {
+      "name": "tau = positives p1",
+      "value": 0.9972475611070859
+    },
+    {
+      "name": "positives p5",
+      "value": 0.9986724186787674
+    }
+  ]
+}

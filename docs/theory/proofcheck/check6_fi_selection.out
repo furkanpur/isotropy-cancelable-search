@@ -1,0 +1,7 @@
+rep0: max|W^T S_t W - I| on DEV (FI): 1.9984014443252818e-15
+d=128 m=32 n_dev=2000 (500 classes x 4); 20 reps; baseline m(m+1)/n_dev = 0.528, (d/m)-scaled = 0.516
+transform                   E||D||_F^2  E||D0||_F^2  E tr(D)/m
+PCA-whiten m                     0.881        0.303     -0.134
+FI (same DEV)                    0.663        0.654      0.015
+FI + re-whiten held-out          1.313        1.267      0.037
+Prop 3 restricted optimum: max |tr(W^T S_b W) - KyFan_m(M)| over reps = 7.105427357601002e-15

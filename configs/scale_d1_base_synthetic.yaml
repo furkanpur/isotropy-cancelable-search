@@ -1,0 +1,12 @@
+# Provenance: synthetic_100000_base_features.npz was extracted with
+# ./models/gazi_base_extended (fingerprint-evaluate-tools scripts/run_ann_scalability_benchmark.py,
+# model_short "base") from the gazi_synthetic_fp image set. The tool's config.yaml default "vit_model_base"
+# is a different model and was not used for these features. The distractors therefore share the D1-base
+# embedding space. Results from this config must be labelled as synthetic distractors.
+name: scale_d1_base_synthetic
+data: {kind: sin, root: /data/primary, model: base, relabel: /data/relabel/d1_relabel.csv}
+split: {n_dev: 1000, n_tgt: 1200, seed: 101}
+preconditioner: "fi:128:512"
+schemes: ["lrp:full", "biohash:half", "iom:256"]
+distractors: {kind: features_by_id, path: /data/scale/synthetic_100000_base_features.npz, sizes: [10000, 50000, 100000], seed: 7, near_dup_cos: 0.95}
+hnsw: {m: 32, ef_construction: 200, ef_search: [64, 128]}

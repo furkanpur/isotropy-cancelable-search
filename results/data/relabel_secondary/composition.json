@@ -1,0 +1,465 @@
+{
+  "by_dataset": [
+    {
+      "label": "FVC2000 DB1",
+      "family": "FVC2000",
+      "source": "FVC",
+      "rows": 80,
+      "dropped_by_relabel": 0,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 80,
+      "fingers_after_relabel": 10,
+      "rows_shared": 48,
+      "fingers_shared": 6,
+      "rows_kept": 32,
+      "fingers_kept": 4
+    },
+    {
+      "label": "FVC2000 DB2",
+      "family": "FVC2000",
+      "source": "FVC",
+      "rows": 80,
+      "dropped_by_relabel": 0,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 80,
+      "fingers_after_relabel": 10,
+      "rows_shared": 24,
+      "fingers_shared": 3,
+      "rows_kept": 56,
+      "fingers_kept": 7
+    },
+    {
+      "label": "FVC2000 DB3",
+      "family": "FVC2000",
+      "source": "FVC",
+      "rows": 80,
+      "dropped_by_relabel": 0,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 80,
+      "fingers_after_relabel": 10,
+      "rows_shared": 24,
+      "fingers_shared": 3,
+      "rows_kept": 56,
+      "fingers_kept": 7
+    },
+    {
+      "label": "FVC2000 DB4",
+      "family": "FVC2000",
+      "source": "FVC",
+      "rows": 80,
+      "dropped_by_relabel": 80,
+      "dropped_outside_path_map": 80,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 0,
+      "fingers_after_relabel": 0,
+      "rows_shared": 0,
+      "fingers_shared": 0,
+      "rows_kept": 0,
+      "fingers_kept": 0
+    },
+    {
+      "label": "FVC2002 DB1",
+      "family": "FVC2002",
+      "source": "FVC",
+      "rows": 80,
+      "dropped_by_relabel": 0,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 80,
+      "fingers_after_relabel": 10,
+      "rows_shared": 8,
+      "fingers_shared": 1,
+      "rows_kept": 72,
+      "fingers_kept": 9
+    },
+    {
+      "label": "FVC2002 DB2",
+      "family": "FVC2002",
+      "source": "FVC",
+      "rows": 80,
+      "dropped_by_relabel": 0,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 80,
+      "fingers_after_relabel": 10,
+      "rows_shared": 24,
+      "fingers_shared": 3,
+      "rows_kept": 56,
+      "fingers_kept": 7
+    },
+    {
+      "label": "FVC2002 DB3",
+      "family": "FVC2002",
+      "source": "FVC",
+      "rows": 80,
+      "dropped_by_relabel": 0,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 80,
+      "fingers_after_relabel": 10,
+      "rows_shared": 32,
+      "fingers_shared": 4,
+      "rows_kept": 48,
+      "fingers_kept": 6
+    },
+    {
+      "label": "FVC2002 DB4",
+      "family": "FVC2002",
+      "source": "FVC",
+      "rows": 80,
+      "dropped_by_relabel": 80,
+      "dropped_outside_path_map": 80,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 0,
+      "fingers_after_relabel": 0,
+      "rows_shared": 0,
+      "fingers_shared": 0,
+      "rows_kept": 0,
+      "fingers_kept": 0
+    },
+    {
+      "label": "FVC2004 DB1",
+      "family": "FVC2004",
+      "source": "FVC",
+      "rows": 80,
+      "dropped_by_relabel": 0,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 80,
+      "fingers_after_relabel": 10,
+      "rows_shared": 32,
+      "fingers_shared": 4,
+      "rows_kept": 48,
+      "fingers_kept": 6
+    },
+    {
+      "label": "FVC2004 DB2",
+      "family": "FVC2004",
+      "source": "FVC",
+      "rows": 80,
+      "dropped_by_relabel": 0,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 80,
+      "fingers_after_relabel": 10,
+      "rows_shared": 16,
+      "fingers_shared": 2,
+      "rows_kept": 64,
+      "fingers_kept": 8
+    },
+    {
+      "label": "FVC2004 DB3",
+      "family": "FVC2004",
+      "source": "FVC",
+      "rows": 80,
+      "dropped_by_relabel": 0,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 80,
+      "fingers_after_relabel": 10,
+      "rows_shared": 32,
+      "fingers_shared": 4,
+      "rows_kept": 48,
+      "fingers_kept": 6
+    },
+    {
+      "label": "FVC2004 DB4",
+      "family": "FVC2004",
+      "source": "FVC",
+      "rows": 80,
+      "dropped_by_relabel": 80,
+      "dropped_outside_path_map": 80,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 0,
+      "fingers_after_relabel": 0,
+      "rows_shared": 0,
+      "fingers_shared": 0,
+      "rows_kept": 0,
+      "fingers_kept": 0
+    },
+    {
+      "label": "SD301a",
+      "family": "SD301a",
+      "source": "SD301",
+      "rows": 2762,
+      "dropped_by_relabel": 2,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 2,
+      "rows_after_relabel": 2760,
+      "fingers_after_relabel": 240,
+      "rows_shared": 2334,
+      "fingers_shared": 201,
+      "rows_kept": 426,
+      "fingers_kept": 39
+    },
+    {
+      "label": "SD302b",
+      "family": "SD302b",
+      "source": "SD302",
+      "rows": 6000,
+      "dropped_by_relabel": 0,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 6000,
+      "fingers_after_relabel": 2000,
+      "rows_shared": 4737,
+      "fingers_shared": 1579,
+      "rows_kept": 1263,
+      "fingers_kept": 421
+    },
+    {
+      "label": "SD302d",
+      "family": "SD302d",
+      "source": "SD302",
+      "rows": 5141,
+      "dropped_by_relabel": 7,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 7,
+      "rows_after_relabel": 5134,
+      "fingers_after_relabel": 2000,
+      "rows_shared": 4076,
+      "fingers_shared": 1579,
+      "rows_kept": 1058,
+      "fingers_kept": 421
+    }
+  ],
+  "by_family": [
+    {
+      "label": "FVC2000",
+      "source": "FVC",
+      "datasets": [
+        "FVC2000 DB1",
+        "FVC2000 DB2",
+        "FVC2000 DB3",
+        "FVC2000 DB4"
+      ],
+      "rows": 320,
+      "dropped_by_relabel": 80,
+      "dropped_outside_path_map": 80,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 240,
+      "fingers_after_relabel": 30,
+      "rows_shared": 96,
+      "fingers_shared": 12,
+      "rows_kept": 144,
+      "fingers_kept": 18
+    },
+    {
+      "label": "FVC2002",
+      "source": "FVC",
+      "datasets": [
+        "FVC2002 DB1",
+        "FVC2002 DB2",
+        "FVC2002 DB3",
+        "FVC2002 DB4"
+      ],
+      "rows": 320,
+      "dropped_by_relabel": 80,
+      "dropped_outside_path_map": 80,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 240,
+      "fingers_after_relabel": 30,
+      "rows_shared": 64,
+      "fingers_shared": 8,
+      "rows_kept": 176,
+      "fingers_kept": 22
+    },
+    {
+      "label": "FVC2004",
+      "source": "FVC",
+      "datasets": [
+        "FVC2004 DB1",
+        "FVC2004 DB2",
+        "FVC2004 DB3",
+        "FVC2004 DB4"
+      ],
+      "rows": 320,
+      "dropped_by_relabel": 80,
+      "dropped_outside_path_map": 80,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 240,
+      "fingers_after_relabel": 30,
+      "rows_shared": 80,
+      "fingers_shared": 10,
+      "rows_kept": 160,
+      "fingers_kept": 20
+    },
+    {
+      "label": "SD301a",
+      "source": "SD301",
+      "datasets": [
+        "SD301a"
+      ],
+      "rows": 2762,
+      "dropped_by_relabel": 2,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 2,
+      "rows_after_relabel": 2760,
+      "fingers_after_relabel": 240,
+      "rows_shared": 2334,
+      "fingers_shared": 201,
+      "rows_kept": 426,
+      "fingers_kept": 39
+    },
+    {
+      "label": "SD302b",
+      "source": "SD302",
+      "datasets": [
+        "SD302b"
+      ],
+      "rows": 6000,
+      "dropped_by_relabel": 0,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 6000,
+      "fingers_after_relabel": 2000,
+      "rows_shared": 4737,
+      "fingers_shared": 1579,
+      "rows_kept": 1263,
+      "fingers_kept": 421
+    },
+    {
+      "label": "SD302d",
+      "source": "SD302",
+      "datasets": [
+        "SD302d"
+      ],
+      "rows": 5141,
+      "dropped_by_relabel": 7,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 7,
+      "rows_after_relabel": 5134,
+      "fingers_after_relabel": 2000,
+      "rows_shared": 4076,
+      "fingers_shared": 1579,
+      "rows_kept": 1058,
+      "fingers_kept": 421
+    }
+  ],
+  "by_source": [
+    {
+      "label": "FVC",
+      "families": [
+        "FVC2000",
+        "FVC2002",
+        "FVC2004"
+      ],
+      "rows": 960,
+      "dropped_by_relabel": 240,
+      "dropped_outside_path_map": 240,
+      "dropped_inside_path_map": 0,
+      "rows_after_relabel": 720,
+      "fingers_after_relabel": 90,
+      "rows_shared": 240,
+      "fingers_shared": 30,
+      "rows_kept": 480,
+      "fingers_kept": 60
+    },
+    {
+      "label": "SD301",
+      "families": [
+        "SD301a"
+      ],
+      "rows": 2762,
+      "dropped_by_relabel": 2,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 2,
+      "rows_after_relabel": 2760,
+      "fingers_after_relabel": 240,
+      "rows_shared": 2334,
+      "fingers_shared": 201,
+      "rows_kept": 426,
+      "fingers_kept": 39
+    },
+    {
+      "label": "SD302",
+      "families": [
+        "SD302b",
+        "SD302d"
+      ],
+      "rows": 11141,
+      "dropped_by_relabel": 7,
+      "dropped_outside_path_map": 0,
+      "dropped_inside_path_map": 7,
+      "rows_after_relabel": 11134,
+      "fingers_after_relabel": 2000,
+      "rows_shared": 8813,
+      "fingers_shared": 1579,
+      "rows_kept": 2321,
+      "fingers_kept": 421
+    }
+  ],
+  "totals": {
+    "rows": 14863,
+    "dropped_by_relabel": 249,
+    "dropped_outside_path_map": 240,
+    "dropped_inside_path_map": 9,
+    "rows_after_relabel": 14614,
+    "fingers_after_relabel": 2330,
+    "rows_shared": 11387,
+    "fingers_shared": 1810,
+    "rows_kept": 3227,
+    "fingers_kept": 520
+  },
+  "checks": {
+    "shared_rows_vs_run_metadata": {
+      "computed": 11387,
+      "reference": 11387,
+      "match": true
+    },
+    "kept_rows_vs_run_metadata": {
+      "computed": 3227,
+      "reference": 3227,
+      "match": true
+    },
+    "relabel_dropped_vs_run_metadata": {
+      "computed": 249,
+      "reference": 249,
+      "match": true
+    },
+    "rows_after_relabel_vs_map_summary": {
+      "computed": 14614,
+      "reference": 14614,
+      "match": true
+    },
+    "fingers_after_relabel_vs_map_summary": {
+      "computed": 2330,
+      "reference": 2330,
+      "match": true
+    },
+    "dropped_vs_map_summary": {
+      "computed": 249,
+      "reference": 249,
+      "match": true
+    },
+    "outside_path_map_vs_map_summary": {
+      "computed": 240,
+      "reference": 240,
+      "match": true
+    }
+  },
+  "provenance": {
+    "secondary_map_sha256": "a900fd5c9b29d7b31368278f370672051b33d3be9d0e62930061ff7d7e69c5cc",
+    "d1_map_sha256": "95f9387d3fcfd8fff7dbb86fdb2bbc79022d1c7766598ff0c497c145fca3dff2",
+    "secondary_manifest_sha256": "8a85f736cf74407115671f019e8220bda299083c8c7e4aa24174a87580f32e4c",
+    "run_metadata_sha256": "fc9403f3d91ba0226ee2651e31d7e60e97262dfbd60fc3d7e289ca51b9c69ad7",
+    "relabel_summary_sha256": "13dae123697f4ee886855d5a73fb815b0277013400ccb0b86ff1add0de6059c4",
+    "run": {
+      "kind": "isotropy",
+      "config": "d1_base",
+      "git_sha": "df324d0e354cfda3982841467d08190ee1cc8447",
+      "started_utc": "2026-11-14T16:46:20.227245+00:00"
+    },
+    "path_map_entries": 11,
+    "script_sha256": "ddb9d1b22e06687ba02d3db8dda3aa182645fd39df0e8fecf6d6dd7902465686",
+    "git_sha": "0aa3188b290237f7cf535c5f1a1ac564e2866f15",
+    "image": "canvec/exp:core",
+    "image_id": "sha256:de566b516b60a9a76ea5ef01cac06543d311cde00c478cf1ab773960714b91a6",
+    "python": "3.12.16",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  }
+}

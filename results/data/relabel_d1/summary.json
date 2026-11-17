@@ -1,0 +1,36 @@
+{
+  "ambiguous": 7,
+  "compilation_manifest_sha256": "f3bcf04b506d7135708d8da0af019f6c1d5f07a215897999493d0fbc634b5158",
+  "compilation_unreadable": 0,
+  "images_per_finger_hist": {
+    "1": 699,
+    "11": 1,
+    "12": 35,
+    "15": 17,
+    "18": 4,
+    "2": 633,
+    "3": 2076,
+    "4": 107,
+    "5": 22,
+    "6": 52,
+    "9": 48
+  },
+  "images_unreadable": 0,
+  "manifest_sha256": "3b0d59101d80ea08d240688ce33001c79ceae70f993fe10f71e6769fc4a21f2f",
+  "matched": 10233,
+  "n_compilation_labelled_rows": 100142,
+  "n_images": 10359,
+  "per_source": {
+    "casia_ageing": 1565,
+    "casia_v5": 4941,
+    "crossmatch": 66,
+    "fvc2000": 36,
+    "fvc2002": 24,
+    "fvc2004": 30,
+    "sd301": 455,
+    "sd302": 3026,
+    "uareu": 90
+  },
+  "true_fingers": 3694,
+  "unmatched": 119
+}

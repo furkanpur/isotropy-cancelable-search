@@ -1,0 +1,4 @@
+m=  16 n_dev=  512  Ecos at N/n_dev=[np.int64(1), np.int64(2), np.int64(4), np.int64(8), np.int64(16), np.int64(32), np.int64(64), np.int64(128)]: [0.338 0.456 0.566 0.68  0.771 0.876 0.948 0.934]  crossing N/n_dev ~ 2.6  (m/4 = 4)
+m=  32 n_dev= 1024  Ecos at N/n_dev=[np.int64(1), np.int64(2), np.int64(4), np.int64(8), np.int64(16), np.int64(32), np.int64(64), np.int64(128)]: [0.275 0.354 0.417 0.549 0.631 0.75  0.869 0.901]  crossing N/n_dev ~ 6.2  (m/4 = 8)
+m=  64 n_dev= 2048  Ecos at N/n_dev=[np.int64(1), np.int64(2), np.int64(4), np.int64(8), np.int64(16), np.int64(32), np.int64(64), np.int64(128)]: [0.178 0.229 0.294 0.391 0.526 0.629 0.724 0.852]  crossing N/n_dev ~ 14.0  (m/4 = 16)
+m= 128 n_dev= 4096  Ecos at N/n_dev=[np.int64(1), np.int64(2), np.int64(4), np.int64(8), np.int64(16), np.int64(32), np.int64(64), np.int64(128)]: [0.127 0.164 0.202 0.28  0.378 0.507 0.63  0.79 ]  crossing N/n_dev ~ 30.8  (m/4 = 32)

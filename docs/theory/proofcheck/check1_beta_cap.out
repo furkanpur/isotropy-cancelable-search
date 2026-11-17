@@ -1,0 +1,52 @@
+check1_beta_cap.py:34: RuntimeWarning: invalid value encountered in divide
+  ratio_m = exact / np.exp(-m * cs ** 2 / 2)
+check1_beta_cap.py:35: RuntimeWarning: invalid value encountered in divide
+  ratio_m1 = exact / np.exp(-(m + 1) * cs ** 2 / 2)
+== 1a. E sqrt(B), B~Beta(r/2,(m-r)/2): closed form vs quadrature vs Monte Carlo ==
+   r     m    closed      quad        MC    MC_se sqrt(r/m)
+   1     2   0.63662   0.63662   0.63727  0.00097   0.70711
+   3     5   0.75000   0.75000   0.75012  0.00061   0.77460
+   8    32   0.48846   0.48846   0.48834  0.00034   0.50000
+  20   128   0.39114   0.39114   0.39133  0.00018   0.39528
+  40   128   0.55662   0.55662   0.55669  0.00016   0.55902
+  80   128   0.78964   0.78964   0.78944  0.00012   0.79057
+
+== 1b. smallest r with c*(r,m) >= 0.5 ==
+m=   64: r50=  17  m/4+1=  17  c*(m/4,m)=0.494180  c*(m/4+1,m)=0.509856
+m=  128: r50=  33  m/4+1=  33  c*(m/4,m)=0.497080  c*(m/4+1,m)=0.504906
+m=  256: r50=  65  m/4+1=  65  c*(m/4,m)=0.498537  c*(m/4+1,m)=0.502447
+m=  768: r50= 193  m/4+1= 193  c*(m/4,m)=0.499512  c*(m/4+1,m)=0.500814
+m= 1024: r50= 257  m/4+1= 257  c*(m/4,m)=0.499634  c*(m/4+1,m)=0.500611
+m= 1536: r50= 385  m/4+1= 385  c*(m/4,m)=0.499756  c*(m/4+1,m)=0.500407
+
+== 1c. cap: exact P(theta_1 >= c) vs Ball bound exp(-m c^2/2), c in [0,1) ==
+m=    2: max exact/exp(-m c^2/2)=0.5000   max exact/exp(-(m+1)c^2/2)=0.5361
+m=    3: max exact/exp(-m c^2/2)=0.5000   max exact/exp(-(m+1)c^2/2)=0.5000
+m=    4: max exact/exp(-m c^2/2)=0.5000   max exact/exp(-(m+1)c^2/2)=0.5000
+m=    5: max exact/exp(-m c^2/2)=0.5000   max exact/exp(-(m+1)c^2/2)=0.5000
+m=    8: max exact/exp(-m c^2/2)=0.5000   max exact/exp(-(m+1)c^2/2)=0.5000
+m=   16: max exact/exp(-m c^2/2)=0.5000   max exact/exp(-(m+1)c^2/2)=0.5000
+m=   32: max exact/exp(-m c^2/2)=0.5000   max exact/exp(-(m+1)c^2/2)=0.5000
+m=   64: max exact/exp(-m c^2/2)=0.5000   max exact/exp(-(m+1)c^2/2)=0.5000
+m=  128: max exact/exp(-m c^2/2)=0.5000   max exact/exp(-(m+1)c^2/2)=0.5000
+m=  256: max exact/exp(-m c^2/2)=0.5000   max exact/exp(-(m+1)c^2/2)=0.5000
+m=  512: max exact/exp(-m c^2/2)=0.5000   max exact/exp(-(m+1)c^2/2)=0.5000
+m= 1024: max exact/exp(-m c^2/2)=0.5000   max exact/exp(-(m+1)c^2/2)=0.5000
+m= 2048: max exact/exp(-m c^2/2)=nan   max exact/exp(-(m+1)c^2/2)=nan
+
+== 1d. how loose is the cap bound at the paper's scale ==
+m=  64 c=0.3: exact=7.592e-03  bound=5.613e-02  log(1/exact)=   4.88  m c^2/2=   2.88
+m=  64 c=0.5: exact=1.114e-05  bound=3.355e-04  log(1/exact)=  11.41  m c^2/2=   8.00
+m=  64 c=0.7: exact=4.327e-11  bound=1.550e-07  log(1/exact)=  23.86  m c^2/2=  15.68
+m= 128 c=0.3: exact=2.761e-04  bound=3.151e-03  log(1/exact)=   8.19  m c^2/2=   5.76
+m= 128 c=0.5: exact=8.054e-10  bound=1.125e-07  log(1/exact)=  20.94  m c^2/2=  16.00
+m= 128 c=0.7: exact=1.350e-20  bound=2.402e-14  log(1/exact)=  45.75  m c^2/2=  31.36
+m= 256 c=0.3: exact=4.811e-07  bound=9.930e-06  log(1/exact)=  14.55  m c^2/2=  11.52
+m= 256 c=0.5: exact=5.803e-18  bound=1.266e-14  log(1/exact)=  39.69  m c^2/2=  32.00
+m= 256 c=0.7: exact=1.843e-39  bound=5.768e-28  log(1/exact)=  89.19  m c^2/2=  62.72
+
+== 1e. E|theta_1| (the T0 baseline that is not trivially zero) ==
+m=  32: E|theta_1|=0.1422  sqrt(2/(pi m))=0.1410  1/sqrt(m)=0.1768
+m=  64: E|theta_1|=0.1001  sqrt(2/(pi m))=0.0997  1/sqrt(m)=0.1250
+m= 128: E|theta_1|=0.0707  sqrt(2/(pi m))=0.0705  1/sqrt(m)=0.0884
+m= 256: E|theta_1|=0.0499  sqrt(2/(pi m))=0.0499  1/sqrt(m)=0.0625

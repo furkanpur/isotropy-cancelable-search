@@ -1,0 +1,170 @@
+{
+  "config": {
+    "name": "d2_fingervit",
+    "data": {
+      "kind": "sin",
+      "root": "/data/corpus_d2",
+      "model": "fingervit"
+    },
+    "split": {
+      "n_dev": 500,
+      "n_tgt": 600,
+      "min_tgt_images": 3,
+      "seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ]
+    },
+    "keys_per_seed": 3,
+    "fmr": [
+      0.001,
+      0.01
+    ],
+    "preconditioners": [
+      "none",
+      "pca:128:1",
+      "pca:256:1",
+      "pca:128:0.5",
+      "fi:64:512",
+      "fi:128:512",
+      "fi:256:512",
+      "rbig:128:2",
+      "firbig:128:512:2"
+    ],
+    "schemes": [
+      "lrp:full",
+      "lrp:half",
+      "biohash:half",
+      "iom:256"
+    ],
+    "attacks": {
+      "anchor": {
+        "r_grid": [
+          5,
+          10,
+          20,
+          40,
+          80,
+          160,
+          320
+        ],
+        "variants": [
+          "exact",
+          "fresh"
+        ],
+        "decoders": [
+          "ridge",
+          "proj",
+          "mlp"
+        ],
+        "min_targets": 100,
+        "mlp_subset": {
+          "pres": [
+            "none",
+            "fi:128:512"
+          ],
+          "schemes": [
+            "lrp:full",
+            "iom:256"
+          ],
+          "r": [
+            80,
+            320
+          ]
+        }
+      },
+      "zeropair": {
+        "p_grid": [
+          8,
+          16,
+          32,
+          64,
+          128
+        ],
+        "methods": [
+          "eigen",
+          "ica",
+          "wp"
+        ],
+        "ica_max_dim": 128,
+        "expensive_keys": 1
+      },
+      "postcompromise": {
+        "enabled": true,
+        "keys": 1
+      }
+    },
+    "bootstrap": {
+      "n_boot": 1000
+    }
+  },
+  "data_source": "sin:corpus_d2:fingervit",
+  "data_files": {
+    "emb_fingervit.npy": "1929e8f430d9c69025288124ee35d30a4d2f2b229ddc49b73867cd640692eb46",
+    "manifest.parquet": "5aca7a0b8d8274f73db1b188f9a606e1a7c98dd3d6b45f8052e92284b9e96335"
+  },
+  "git_sha": "df324d0e354cfda3982841467d08190ee1cc8447",
+  "image_freeze": "cloudpickle==3.1.2\ncontourpy==1.4.0\ncycler==0.12.1\nfaiss-cpu==1.15.1\nfonttools==4.68.0\njoblib==1.6.0\nkiwisolver==1.5.1\nmatplotlib==3.11.2\nnarwhals==2.28.0\nnumpy==2.5.4\npackaging==26.3\npandas==3.1.0\npillow==13.0.0\nPOT==0.9.7.post1\npyarrow==26.0.0\npyparsing==3.3.3\npython-dateutil==4.0.0\nPyYAML==6.0.3\nscikit-learn==1.9.1\nscipy==1.18.1\nthreadpoolctl==3.8.0\ntzdata==2026.6\n",
+  "omp_num_threads": "4",
+  "cpu_model": "AMD Ryzen 9 7950X 16-Core Processor",
+  "corpus_counts": {
+    "images": 18493,
+    "identities": 3140,
+    "identities_ge_min_tgt_images": 3140
+  },
+  "split_counts": {
+    "201": {
+      "dev_identities": 500,
+      "tgt_identities": 600,
+      "aux_identities": 2040,
+      "dev_images": 2998,
+      "tgt_images": 3498,
+      "aux_images": 11997
+    },
+    "202": {
+      "dev_identities": 500,
+      "tgt_identities": 600,
+      "aux_identities": 2040,
+      "dev_images": 2994,
+      "tgt_images": 3597,
+      "aux_images": 11902
+    },
+    "203": {
+      "dev_identities": 500,
+      "tgt_identities": 600,
+      "aux_identities": 2040,
+      "dev_images": 3024,
+      "tgt_images": 3568,
+      "aux_images": 11901
+    },
+    "204": {
+      "dev_identities": 500,
+      "tgt_identities": 600,
+      "aux_identities": 2040,
+      "dev_images": 3025,
+      "tgt_images": 3546,
+      "aux_images": 11922
+    },
+    "205": {
+      "dev_identities": 500,
+      "tgt_identities": 600,
+      "aux_identities": 2040,
+      "dev_images": 3012,
+      "tgt_images": 3509,
+      "aux_images": 11972
+    }
+  },
+  "aux_sizes": {
+    "same_dist": 11997
+  },
+  "shifted_aux_source": null,
+  "shifted_aux_removed": null,
+  "secondary_removed_shared_identity": null,
+  "python": "3.12.16",
+  "numpy": "2.5.4",
+  "started_utc": "2026-11-14T16:45:47.264123+00:00",
+  "runtime_s": 3566.369747400284
+}

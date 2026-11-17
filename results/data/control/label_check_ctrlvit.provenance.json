@@ -1,0 +1,7 @@
+{
+ "image": "canvec/exp:core",
+ "image_id": "sha256:de566b516b60a9a76ea5ef01cac06543d311cde00c478cf1ab773960714b91a6",
+ "python": "3.12.16",
+ "git_sha": "83d46f852ac926a40d93aa99084a38c9e62713d2",
+ "utc": "2026-11-15T09:16:38Z"
+}

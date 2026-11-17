@@ -1,0 +1,4 @@
+c=0.5: P_proj(cos>=c)=0.4614  best lottery=0.4614  proposed bound=0.6806  holds=True
+c=0.6: P_proj(cos>=c)=0.1532  best lottery=0.1532  proposed bound=0.3212  holds=True
+c=0.7: P_proj(cos>=c)=0.0212  best lottery=0.0212  proposed bound=0.0734  holds=True
+c=0.8: P_proj(cos>=c)=0.0006  best lottery=0.0006  proposed bound=0.0057  holds=True

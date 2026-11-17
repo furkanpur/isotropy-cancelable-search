@@ -1,0 +1,123 @@
+{
+  "argv": [
+    "embed",
+    "--manifest",
+    "/data/manifest.parquet",
+    "--image-root",
+    "/data/images",
+    "--weights",
+    "/data/weights",
+    "--out",
+    "/out",
+    "--workers",
+    "16",
+    "--data-source",
+    "real: final D2, compilation real (18,493 images, 3,140 fingers)"
+  ],
+  "complete": true,
+  "data_source": "real: final D2, compilation real (18,493 images, 3,140 fingers)",
+  "device": "cuda",
+  "emb_sha256": "18072d59e9e2a5d82f8d5eaadd0ca0b3bc3a23ce09b1d8aacb448937b1c93696",
+  "environment": {
+    "env": {
+      "git_sha": "12f4aefd496ad1bc813f692a23742af640989537",
+      "image": "canvec/extract:gpu",
+      "image_id": "sha256:be5673c663cfcee9fac6b41656bf97085caa15d36b91d9a2efd3b299f1e28d0d"
+    },
+    "script_sha256": "defbd674b7dc5b82376d32de7376347ed2add5ffaa6843bd125d3122698b3ad4",
+    "software": {
+      "PIL": "12.0.0",
+      "cuda_runtime": "12.8",
+      "cudnn": 91002,
+      "cudnn_allow_tf32": true,
+      "cv2": "4.11.0",
+      "flx_tree_sha256": "996928fba5c14a8538323d9cf0ddf9ac554c7cc9cc8614def289f261125a3701",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "huggingface_hub": "0.35.3",
+      "matmul_allow_tf32": false,
+      "numpy": "2.2.6",
+      "nvidia_driver": "595.99.02",
+      "pandas": "2.3.3",
+      "pyarrow": "21.0.0",
+      "python": "3.12.3",
+      "safetensors": "0.6.2",
+      "tokenizers": "0.22.1",
+      "torch": "2.9.0+cu128",
+      "torchmetrics": "1.8.2",
+      "torchvision": "0.24.0+cu128",
+      "transformers": "4.57.1"
+    }
+  },
+  "eval_precision": "fp32, TF32 disabled for cuDNN and matmul",
+  "input_images": {
+    "combined_sha256": "ccee8fe243ed8e2a12e68f2923e8c40c0a468d2ff057d1a27847a878bc584647",
+    "images": 18493
+  },
+  "input_manifest_sha256": "5aca7a0b8d8274f73db1b188f9a606e1a7c98dd3d6b45f8052e92284b9e96335",
+  "limit_rows": null,
+  "manifest_rows": 18493,
+  "manifest_sha256": "5aca7a0b8d8274f73db1b188f9a606e1a7c98dd3d6b45f8052e92284b9e96335",
+  "recipe": {
+    "AFFINE": {
+      "degrees": 10,
+      "fill": 255,
+      "scale": [
+        0.9,
+        1.1
+      ],
+      "translate": [
+        0.05,
+        0.05
+      ]
+    },
+    "AFFINE_INTERPOLATION": "NEAREST (torchvision RandomAffine default; recorded, not changed)",
+    "ARC_M": 0.3,
+    "ARC_S": 30.0,
+    "BACKBONE": "facebook/dinov2-base",
+    "BATCH": 128,
+    "EMB_DIM": 768,
+    "EPOCHS": 30,
+    "IMAGE_SIZE": 224,
+    "JITTER": {
+      "brightness": 0.2,
+      "contrast": 0.2
+    },
+    "LAYER_DECAY": 0.75,
+    "LR_BACKBONE": 2e-05,
+    "LR_HEAD": 0.001,
+    "MAX_IMPOSTOR_PAIRS": 200000,
+    "MEAN": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "SEED": 20261115,
+    "SELF_CHECK_MIN_COSINE": 0.9999,
+    "SELF_CHECK_ROWS": 200,
+    "STD": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "UNIT_NORM_TOL": 0.001,
+    "WARMUP_EPOCHS": 1,
+    "WEIGHT_DECAY": 0.05
+  },
+  "reproducibility": "not bitwise reproducible: no deterministic-algorithm setting; augmentation seeds depend on the number of data-loading workers",
+  "rows": 18493,
+  "seconds": 32.0,
+  "self_consistency": {
+    "min_cosine": 0.9999996423721313,
+    "rows": 200,
+    "threshold": 0.9999
+  },
+  "smoke": false,
+  "status": "ok",
+  "weights_fetch": null,
+  "weights_files_sha256": {
+    "config.json": "07d62c4d7ccd147003e27a1e73f4505199b192119670d7108728c38490852585",
+    "model.safetensors": "a4df7eb427901788e23ad0e3223ecabcac5ad39e83d08198f652c2cd6d3b8cc5"
+  },
+  "weights_sha256": "87a9d446a4b98a82eb0a4a1b0448b6242a71e2ed684302124c1b07ec99d77a5e",
+  "workers": 16
+}

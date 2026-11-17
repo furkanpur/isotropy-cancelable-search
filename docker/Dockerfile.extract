@@ -1,0 +1,35 @@
+# CanVec embedding-extraction image (GPU): finger-vit and DeepPrint (flx) encoders, scripts/data/extract_d2.py.
+# The encoders read fingerprint images, so the container runs only with the data and the weights mounted
+# read-only, --network none, --gpus all and the invoking user.  The network is used only while building.
+#
+# Build context: this file, requirements-extract.txt and flx/, the package directory of the flx repository
+# (https://github.com/tim-rohwedder/fixed-length-fingerprint-extractors, commit 7accfca), with its LICENSE as
+# flx/LICENSE.flx.  The weights are not part of the image; they are mounted at run time.
+#   docker build -t canvec/extract:gpu -f Dockerfile.extract <context>
+FROM nvidia/cuda:12.6.3-cudnn-runtime-ubuntu24.04@sha256:8aef630a54bc5c5146ae5ce68e6af5caa3df0fb690bb91544175c91f307e4356
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends python3 python3-venv \
+    && rm -rf /var/lib/apt/lists/* \
+    && python3 -m venv /opt/venv
+
+ENV PATH=/opt/venv/bin:$PATH
+
+COPY requirements-extract.txt /opt/canvec/requirements-extract.txt
+RUN pip install -r /opt/canvec/requirements-extract.txt \
+    && pip freeze > /opt/canvec/requirements-extract.freeze.txt
+
+COPY flx /opt/flx/flx
+
+ENV PYTHONPATH=/opt/flx \
+    HF_HUB_OFFLINE=1 \
+    TRANSFORMERS_OFFLINE=1 \
+    HOME=/tmp
+
+WORKDIR /work

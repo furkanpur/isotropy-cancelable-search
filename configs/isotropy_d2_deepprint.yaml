@@ -1,0 +1,17 @@
+name: d2_deepprint
+data: {kind: sin, root: /data/corpus_d2, model: deepprint}
+split: {n_dev: 500, n_tgt: 600, min_tgt_images: 3, seeds: [301, 302, 303, 304, 305]}
+keys_per_seed: 3
+fmr: [0.001, 0.01]
+preconditioners: [none, "pca:128:1", "pca:256:1", "pca:128:0.5", "fi:64:384", "fi:128:384", "fi:256:384", "rbig:128:2", "firbig:128:384:2"]
+schemes: ["lrp:full", "lrp:half", "biohash:half", "iom:256"]
+attacks:
+  anchor:
+    r_grid: [5, 10, 20, 40, 80, 160, 320]
+    variants: [exact, fresh]
+    decoders: [ridge, proj, mlp]
+    min_targets: 100
+    mlp_subset: {pres: [none, "fi:128:384"], schemes: ["lrp:full", "iom:256"], r: [80, 320]}
+  zeropair: {p_grid: [8, 16, 32, 64, 128], methods: [eigen, ica, wp], ica_max_dim: 128, expensive_keys: 1}
+  postcompromise: {enabled: true, keys: 1}
+bootstrap: {n_boot: 1000}

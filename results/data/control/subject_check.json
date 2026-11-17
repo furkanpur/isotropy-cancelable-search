@@ -1,0 +1,797 @@
+{
+  "data_source": "real: D2 embeddings of ctrl-vit, finger-vit and DeepPrint (second corpus); subject flags of the ctrl-vit training-set build",
+  "encoders": {
+    "ctrlvit": {
+      "counts": {
+        "fingers": {
+          "clean": 56,
+          "flagged_max": 56,
+          "flagged_mean": 56.0,
+          "flagged_min": 56
+        },
+        "genuine_pairs": {
+          "clean": 560,
+          "flagged_max": 560,
+          "flagged_mean": 560.0,
+          "flagged_min": 560
+        },
+        "images": {
+          "clean": 280,
+          "flagged_max": 280,
+          "flagged_mean": 280.0,
+          "flagged_min": 280
+        },
+        "impostor_pairs": {
+          "clean": 38500,
+          "flagged_max": 38500,
+          "flagged_mean": 38500.0,
+          "flagged_min": 38500
+        }
+      },
+      "dim": 768,
+      "fingers": {
+        "clean": 56,
+        "flagged": 2181,
+        "subsample_size": 56
+      },
+      "prekey_record": {
+        "config": "isotropy_d2_ctrlvit.yaml",
+        "config_sha256": "2b32a27051c06a06570375582e4d43cbd45f420ebe98905edf32fb1432cfbb1a",
+        "dev_fingers": 500,
+        "dev_images": 2998,
+        "min_tgt_images": 3,
+        "n_dev": 500,
+        "n_tgt": 600,
+        "seed": 201
+      },
+      "spaces": {
+        "prekey": {
+          "label": "experiments' pre-key space (DEV-mean centred, then L2-normalised)",
+          "statistics": {
+            "auc": {
+              "clean": 0.9880299628942486,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.9969585262059368,
+              "flagged_p2.5": 0.9947639059601113,
+              "flagged_p97.5": 0.9989109572124304
+            },
+            "eer": {
+              "clean": 0.046831168831168835,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.023857467532467532,
+              "flagged_p2.5": 0.014285714285714285,
+              "flagged_p97.5": 0.034017857142857134
+            },
+            "mean_genuine": {
+              "clean": 0.5816670628644023,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.5488669808623359,
+              "flagged_p2.5": 0.5339091750954055,
+              "flagged_p97.5": 0.5701959510759229
+            },
+            "mean_impostor": {
+              "clean": 0.03876065918996182,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.007059485438533829,
+              "flagged_p2.5": 0.005432948691207621,
+              "flagged_p97.5": 0.009542759853216046
+            },
+            "pr_all_images": {
+              "bounded_by_samples": true,
+              "clean": 41.287334775006634,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 64.61629327828538,
+              "flagged_p2.5": 62.563528654716634,
+              "flagged_p97.5": 67.58459865341874,
+              "max_possible_clean": 279,
+              "samples": {
+                "clean": 280,
+                "flagged_max": 280,
+                "flagged_mean": 280.0,
+                "flagged_min": 280
+              }
+            },
+            "pr_one_image_per_finger": {
+              "bounded_by_samples": true,
+              "clean": 29.310849548330264,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 39.242034792890514,
+              "flagged_p2.5": 37.830426004191494,
+              "flagged_p97.5": 40.23155674684114,
+              "max_possible_clean": 55,
+              "samples": {
+                "clean": 56,
+                "flagged_max": 56,
+                "flagged_mean": 56.0,
+                "flagged_min": 56
+              }
+            }
+          }
+        },
+        "raw": {
+          "label": "raw (uncentred) cosine space",
+          "statistics": {
+            "auc": {
+              "clean": 0.9877663265306122,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.996747504638219,
+              "flagged_p2.5": 0.99471988114564,
+              "flagged_p97.5": 0.9988313085575139
+            },
+            "eer": {
+              "clean": 0.04703896103896104,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.024406818181818182,
+              "flagged_p2.5": 0.015515746753246752,
+              "flagged_p97.5": 0.03517987012987012
+            },
+            "mean_genuine": {
+              "clean": 0.5813073770652398,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.5496926447452172,
+              "flagged_p2.5": 0.5338516023340785,
+              "flagged_p97.5": 0.5711603585888295
+            },
+            "mean_impostor": {
+              "clean": 0.038456458429296465,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.009232014514757903,
+              "flagged_p2.5": 0.006221867796712106,
+              "flagged_p97.5": 0.012459520207678876
+            },
+            "pr_all_images": {
+              "bounded_by_samples": true,
+              "clean": 41.31191776761291,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 64.64158499746014,
+              "flagged_p2.5": 62.578516295949434,
+              "flagged_p97.5": 67.6122978336994,
+              "max_possible_clean": 279,
+              "samples": {
+                "clean": 280,
+                "flagged_max": 280,
+                "flagged_mean": 280.0,
+                "flagged_min": 280
+              }
+            },
+            "pr_one_image_per_finger": {
+              "bounded_by_samples": true,
+              "clean": 29.36469253424081,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 39.240967337412776,
+              "flagged_p2.5": 37.81877350850054,
+              "flagged_p97.5": 40.22183644749084,
+              "max_possible_clean": 55,
+              "samples": {
+                "clean": 56,
+                "flagged_max": 56,
+                "flagged_mean": 56.0,
+                "flagged_min": 56
+              }
+            }
+          }
+        }
+      }
+    },
+    "deepprint": {
+      "counts": {
+        "fingers": {
+          "clean": 56,
+          "flagged_max": 56,
+          "flagged_mean": 56.0,
+          "flagged_min": 56
+        },
+        "genuine_pairs": {
+          "clean": 560,
+          "flagged_max": 560,
+          "flagged_mean": 560.0,
+          "flagged_min": 560
+        },
+        "images": {
+          "clean": 280,
+          "flagged_max": 280,
+          "flagged_mean": 280.0,
+          "flagged_min": 280
+        },
+        "impostor_pairs": {
+          "clean": 38500,
+          "flagged_max": 38500,
+          "flagged_mean": 38500.0,
+          "flagged_min": 38500
+        }
+      },
+      "dim": 512,
+      "fingers": {
+        "clean": 56,
+        "flagged": 2181,
+        "subsample_size": 56
+      },
+      "prekey_record": {
+        "config": "isotropy_d2_deepprint.yaml",
+        "config_sha256": "0adc959da7239fd0ec9b765f58308561cf878b445142ada3eef3f8f4814e045c",
+        "dev_fingers": 500,
+        "dev_images": 2932,
+        "min_tgt_images": 3,
+        "n_dev": 500,
+        "n_tgt": 600,
+        "seed": 301
+      },
+      "spaces": {
+        "prekey": {
+          "label": "experiments' pre-key space (DEV-mean centred, then L2-normalised)",
+          "statistics": {
+            "auc": {
+              "clean": 0.7966713358070501,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.6700144584879407,
+              "flagged_p2.5": 0.6274322976576995,
+              "flagged_p97.5": 0.703979398770872
+            },
+            "eer": {
+              "clean": 0.2834805194805195,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.3857512987012987,
+              "flagged_p2.5": 0.3615625,
+              "flagged_p97.5": 0.4202798701298701
+            },
+            "mean_genuine": {
+              "clean": 0.37122699114169894,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.19547135278881378,
+              "flagged_p2.5": 0.15568289352130762,
+              "flagged_p97.5": 0.2348259098694782
+            },
+            "mean_impostor": {
+              "clean": 0.03439769328616458,
+              "clean_outside_flagged_range": false,
+              "flagged_mean": 0.0281015210091994,
+              "flagged_p2.5": 0.01686599077414828,
+              "flagged_p97.5": 0.04749161600046241
+            },
+            "pr_all_images": {
+              "bounded_by_samples": true,
+              "clean": 16.87167343501948,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 19.597563177118428,
+              "flagged_p2.5": 18.339612591976458,
+              "flagged_p97.5": 20.96585107102244,
+              "max_possible_clean": 279,
+              "samples": {
+                "clean": 280,
+                "flagged_max": 280,
+                "flagged_mean": 280.0,
+                "flagged_min": 280
+              }
+            },
+            "pr_one_image_per_finger": {
+              "bounded_by_samples": true,
+              "clean": 13.134557529071882,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 15.806571551313379,
+              "flagged_p2.5": 14.462861075529318,
+              "flagged_p97.5": 17.097327897758145,
+              "max_possible_clean": 55,
+              "samples": {
+                "clean": 56,
+                "flagged_max": 56,
+                "flagged_mean": 56.0,
+                "flagged_min": 56
+              }
+            }
+          }
+        },
+        "raw": {
+          "label": "raw (uncentred) cosine space",
+          "statistics": {
+            "auc": {
+              "clean": 0.7628533627087198,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.6404140456864563,
+              "flagged_p2.5": 0.5993933371985158,
+              "flagged_p97.5": 0.6742101756725417
+            },
+            "eer": {
+              "clean": 0.30357142857142855,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.40338961038961046,
+              "flagged_p2.5": 0.38264334415584417,
+              "flagged_p97.5": 0.4303347402597402
+            },
+            "mean_genuine": {
+              "clean": 0.6175491301944268,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.5354162858175044,
+              "flagged_p2.5": 0.51365698624654,
+              "flagged_p97.5": 0.5635052877281792
+            },
+            "mean_impostor": {
+              "clean": 0.4139857757069109,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.44131277971541827,
+              "flagged_p2.5": 0.42057202133986404,
+              "flagged_p97.5": 0.46360564811219784
+            },
+            "pr_all_images": {
+              "bounded_by_samples": true,
+              "clean": 17.309204880217752,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 19.473739871424396,
+              "flagged_p2.5": 18.161076369662364,
+              "flagged_p97.5": 20.81606903272687,
+              "max_possible_clean": 279,
+              "samples": {
+                "clean": 280,
+                "flagged_max": 280,
+                "flagged_mean": 280.0,
+                "flagged_min": 280
+              }
+            },
+            "pr_one_image_per_finger": {
+              "bounded_by_samples": true,
+              "clean": 13.087041821856806,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 15.538077537478074,
+              "flagged_p2.5": 14.451012439865947,
+              "flagged_p97.5": 16.797351796602083,
+              "max_possible_clean": 55,
+              "samples": {
+                "clean": 56,
+                "flagged_max": 56,
+                "flagged_mean": 56.0,
+                "flagged_min": 56
+              }
+            }
+          }
+        }
+      }
+    },
+    "fingervit": {
+      "counts": {
+        "fingers": {
+          "clean": 56,
+          "flagged_max": 56,
+          "flagged_mean": 56.0,
+          "flagged_min": 56
+        },
+        "genuine_pairs": {
+          "clean": 560,
+          "flagged_max": 560,
+          "flagged_mean": 560.0,
+          "flagged_min": 560
+        },
+        "images": {
+          "clean": 280,
+          "flagged_max": 280,
+          "flagged_mean": 280.0,
+          "flagged_min": 280
+        },
+        "impostor_pairs": {
+          "clean": 38500,
+          "flagged_max": 38500,
+          "flagged_mean": 38500.0,
+          "flagged_min": 38500
+        }
+      },
+      "dim": 1536,
+      "fingers": {
+        "clean": 56,
+        "flagged": 2181,
+        "subsample_size": 56
+      },
+      "prekey_record": {
+        "config": "isotropy_d2_fingervit.yaml",
+        "config_sha256": "f38d5447571640be62c8e5a50237b733dd14e6a829db9fa104ab9817d6679f96",
+        "dev_fingers": 500,
+        "dev_images": 2998,
+        "min_tgt_images": 3,
+        "n_dev": 500,
+        "n_tgt": 600,
+        "seed": 201
+      },
+      "spaces": {
+        "prekey": {
+          "label": "experiments' pre-key space (DEV-mean centred, then L2-normalised)",
+          "statistics": {
+            "auc": {
+              "clean": 0.9069708487940631,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.8701353223562152,
+              "flagged_p2.5": 0.8471440746753247,
+              "flagged_p97.5": 0.8901729539656772
+            },
+            "eer": {
+              "clean": 0.18023376623376625,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.2136444805194805,
+              "flagged_p2.5": 0.18951298701298702,
+              "flagged_p97.5": 0.2396034090909091
+            },
+            "mean_genuine": {
+              "clean": 0.6625632803324496,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.5428463393531923,
+              "flagged_p2.5": 0.514083691414523,
+              "flagged_p97.5": 0.5687860407271023
+            },
+            "mean_impostor": {
+              "clean": 0.12892080877256007,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.09054161136621734,
+              "flagged_p2.5": 0.0768665752385092,
+              "flagged_p97.5": 0.11634732999714308
+            },
+            "pr_all_images": {
+              "bounded_by_samples": true,
+              "clean": 8.274008446273923,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 10.004790394020905,
+              "flagged_p2.5": 9.25701523268671,
+              "flagged_p97.5": 10.71811434931129,
+              "max_possible_clean": 279,
+              "samples": {
+                "clean": 280,
+                "flagged_max": 280,
+                "flagged_mean": 280.0,
+                "flagged_min": 280
+              }
+            },
+            "pr_one_image_per_finger": {
+              "bounded_by_samples": true,
+              "clean": 7.745529942457535,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 9.041154937344254,
+              "flagged_p2.5": 8.401130492112475,
+              "flagged_p97.5": 9.858909058910799,
+              "max_possible_clean": 55,
+              "samples": {
+                "clean": 56,
+                "flagged_max": 56,
+                "flagged_mean": 56.0,
+                "flagged_min": 56
+              }
+            }
+          }
+        },
+        "raw": {
+          "label": "raw (uncentred) cosine space",
+          "statistics": {
+            "auc": {
+              "clean": 0.9084657235621522,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.8654601565398886,
+              "flagged_p2.5": 0.8410135157699443,
+              "flagged_p97.5": 0.8887409317022263
+            },
+            "eer": {
+              "clean": 0.1743116883116883,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.21742564935064937,
+              "flagged_p2.5": 0.19813376623376625,
+              "flagged_p97.5": 0.2385267857142857
+            },
+            "mean_genuine": {
+              "clean": 0.7626115814494848,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 0.6833291555433202,
+              "flagged_p2.5": 0.6648236527595438,
+              "flagged_p97.5": 0.7007315783868875
+            },
+            "mean_impostor": {
+              "clean": 0.36387125925738595,
+              "clean_outside_flagged_range": false,
+              "flagged_mean": 0.36548012143019104,
+              "flagged_p2.5": 0.34344717767495164,
+              "flagged_p97.5": 0.39311446419687457
+            },
+            "pr_all_images": {
+              "bounded_by_samples": true,
+              "clean": 7.779781867265306,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 9.67561411271846,
+              "flagged_p2.5": 8.908390980242777,
+              "flagged_p97.5": 10.44642580186266,
+              "max_possible_clean": 279,
+              "samples": {
+                "clean": 280,
+                "flagged_max": 280,
+                "flagged_mean": 280.0,
+                "flagged_min": 280
+              }
+            },
+            "pr_one_image_per_finger": {
+              "bounded_by_samples": true,
+              "clean": 7.33564076774821,
+              "clean_outside_flagged_range": true,
+              "flagged_mean": 8.771878385979702,
+              "flagged_p2.5": 8.147896812995588,
+              "flagged_p97.5": 9.624316547341964,
+              "max_possible_clean": 55,
+              "samples": {
+                "clean": 56,
+                "flagged_max": 56,
+                "flagged_mean": 56.0,
+                "flagged_min": 56
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "flag_rule": "flagged = the D2 finger's subject (identity without its last ':' part) has at least one finger in the ctrl-vit training set (d2_subject_flags.parquet, Task C1); clean = it has none",
+  "inputs_sha256": {
+    "d2_base/emb_deepprint.npy": "4391aa90ce31d7b0fba122afa8aa5ab912a031d7c1438f4ec3839d2854d691d0",
+    "d2_base/emb_fingervit.npy": "1929e8f430d9c69025288124ee35d30a4d2f2b229ddc49b73867cd640692eb46",
+    "d2_base/manifest.parquet": "5aca7a0b8d8274f73db1b188f9a606e1a7c98dd3d6b45f8052e92284b9e96335",
+    "d2_ctrl/emb_ctrlvit.npy": "18072d59e9e2a5d82f8d5eaadd0ca0b3bc3a23ce09b1d8aacb448937b1c93696",
+    "d2_ctrl/manifest.parquet": "5aca7a0b8d8274f73db1b188f9a606e1a7c98dd3d6b45f8052e92284b9e96335",
+    "d2_subject_flags.parquet": "bd21d119fb19e2331a75bb81f26837c4f8a7b3df31e2ee29481b96d7698e1934"
+  },
+  "polyu": {
+    "ctrlvit": {
+      "auc": 0.9923,
+      "fingers": 336,
+      "genuine_pairs": 13200,
+      "images": 2976,
+      "impostor_pairs": 4413600,
+      "mean_genuine": 0.6773,
+      "mean_impostor": 0.1705,
+      "source": "polyu_cross"
+    },
+    "deepprint": {
+      "auc": 0.8931,
+      "fingers": 336,
+      "genuine_pairs": 13200,
+      "images": 2976,
+      "impostor_pairs": 4413600,
+      "mean_genuine": 0.7736,
+      "mean_impostor": 0.5132,
+      "source": "polyu_cross"
+    },
+    "fingervit": {
+      "auc": 0.9302,
+      "fingers": 336,
+      "genuine_pairs": 13200,
+      "images": 2976,
+      "impostor_pairs": 4413600,
+      "mean_genuine": 0.9373,
+      "mean_impostor": 0.7058,
+      "source": "polyu_cross"
+    }
+  },
+  "polyu_descriptive": {
+    "ctrlvit": {
+      "counts": {
+        "fingers": 336,
+        "genuine_pairs": 13200,
+        "images": 2976,
+        "impostor_pairs": 200000,
+        "pr_all_images_samples": 2976,
+        "pr_one_image_per_finger_samples": 336
+      },
+      "dim": 768,
+      "fingers": 336,
+      "prekey_record": {
+        "config": "isotropy_d2_ctrlvit.yaml",
+        "config_sha256": "2b32a27051c06a06570375582e4d43cbd45f420ebe98905edf32fb1432cfbb1a",
+        "dev_fingers": 500,
+        "dev_images": 2998,
+        "min_tgt_images": 3,
+        "n_dev": 500,
+        "n_tgt": 600,
+        "seed": 201
+      },
+      "source": "polyu_cross",
+      "spaces": {
+        "prekey": {
+          "auc": 0.9930043147727273,
+          "eer": 0.03992424242424243,
+          "fingers": 336,
+          "genuine_pairs": 13200,
+          "images": 2976,
+          "impostor_pairs": 200000,
+          "mean_genuine": 0.6572057576725563,
+          "mean_impostor": 0.11899114897595155,
+          "pr_all_images": 58.82093854333319,
+          "pr_all_images_samples": 2976,
+          "pr_one_image_per_finger": 53.7339834039683,
+          "pr_one_image_per_finger_samples": 336
+        },
+        "raw": {
+          "auc": 0.9921084081439394,
+          "eer": 0.04303030303030303,
+          "fingers": 336,
+          "genuine_pairs": 13200,
+          "images": 2976,
+          "impostor_pairs": 200000,
+          "mean_genuine": 0.6772928693141024,
+          "mean_impostor": 0.1708912170866054,
+          "pr_all_images": 59.06083994718289,
+          "pr_all_images_samples": 2976,
+          "pr_one_image_per_finger": 53.92479639440539,
+          "pr_one_image_per_finger_samples": 336
+        }
+      }
+    },
+    "deepprint": {
+      "counts": {
+        "fingers": 336,
+        "genuine_pairs": 13200,
+        "images": 2976,
+        "impostor_pairs": 200000,
+        "pr_all_images_samples": 2976,
+        "pr_one_image_per_finger_samples": 336
+      },
+      "dim": 512,
+      "fingers": 336,
+      "prekey_record": {
+        "config": "isotropy_d2_deepprint.yaml",
+        "config_sha256": "0adc959da7239fd0ec9b765f58308561cf878b445142ada3eef3f8f4814e045c",
+        "dev_fingers": 500,
+        "dev_images": 2932,
+        "min_tgt_images": 3,
+        "n_dev": 500,
+        "n_tgt": 600,
+        "seed": 301
+      },
+      "source": "polyu_cross",
+      "spaces": {
+        "prekey": {
+          "auc": 0.9226378357954546,
+          "eer": 0.1531060606060606,
+          "fingers": 336,
+          "genuine_pairs": 13200,
+          "images": 2976,
+          "impostor_pairs": 200000,
+          "mean_genuine": 0.6342858865954006,
+          "mean_impostor": 0.19651146549670767,
+          "pr_all_images": 20.86744416356984,
+          "pr_all_images_samples": 2976,
+          "pr_one_image_per_finger": 19.841436068126736,
+          "pr_one_image_per_finger_samples": 336
+        },
+        "raw": {
+          "auc": 0.8929333899621212,
+          "eer": 0.18484848484848485,
+          "fingers": 336,
+          "genuine_pairs": 13200,
+          "images": 2976,
+          "impostor_pairs": 200000,
+          "mean_genuine": 0.7735534593718479,
+          "mean_impostor": 0.5135613785900295,
+          "pr_all_images": 20.792431503915395,
+          "pr_all_images_samples": 2976,
+          "pr_one_image_per_finger": 19.806426011031423,
+          "pr_one_image_per_finger_samples": 336
+        }
+      }
+    },
+    "fingervit": {
+      "counts": {
+        "fingers": 336,
+        "genuine_pairs": 13200,
+        "images": 2976,
+        "impostor_pairs": 200000,
+        "pr_all_images_samples": 2976,
+        "pr_one_image_per_finger_samples": 336
+      },
+      "dim": 1536,
+      "fingers": 336,
+      "prekey_record": {
+        "config": "isotropy_d2_fingervit.yaml",
+        "config_sha256": "f38d5447571640be62c8e5a50237b733dd14e6a829db9fa104ab9817d6679f96",
+        "dev_fingers": 500,
+        "dev_images": 2998,
+        "min_tgt_images": 3,
+        "n_dev": 500,
+        "n_tgt": 600,
+        "seed": 201
+      },
+      "source": "polyu_cross",
+      "spaces": {
+        "prekey": {
+          "auc": 0.9220580090909091,
+          "eer": 0.16515151515151516,
+          "fingers": 336,
+          "genuine_pairs": 13200,
+          "images": 2976,
+          "impostor_pairs": 200000,
+          "mean_genuine": 0.9199070237231036,
+          "mean_impostor": 0.6350078896594444,
+          "pr_all_images": 4.753741781328263,
+          "pr_all_images_samples": 2976,
+          "pr_one_image_per_finger": 4.794772670299891,
+          "pr_one_image_per_finger_samples": 336
+        },
+        "raw": {
+          "auc": 0.929955703409091,
+          "eer": 0.15475,
+          "fingers": 336,
+          "genuine_pairs": 13200,
+          "images": 2976,
+          "impostor_pairs": 200000,
+          "mean_genuine": 0.9373068227499608,
+          "mean_impostor": 0.7060172002137599,
+          "pr_all_images": 4.536184890170959,
+          "pr_all_images_samples": 2976,
+          "pr_one_image_per_finger": 4.5686339889863685,
+          "pr_one_image_per_finger_samples": 336
+        }
+      }
+    }
+  },
+  "polyu_descriptive_note": "subset_stats of clean_subset.py on every polyu_cross finger with at least min_images images, in the raw and pre-key spaces; descriptive, no comparison set",
+  "polyu_note": "polyu_cross is a D2 source absent from ctrl-vit's training data; AUC from label_check.py, histogram AUC over 4000 bins, as label_check.py",
+  "provenance": {
+    "clean_subset_sha256": "a1026191c39b48549df62abf97afd20243d90e11538aa7592850f0831dd33685",
+    "env": {
+      "git_sha": "f10bb3a1a0916d7d972a9398d903efc3c446c110",
+      "image": "canvec/exp:core",
+      "image_id": "sha256:de566b516b60a9a76ea5ef01cac06543d311cde00c478cf1ab773960714b91a6"
+    },
+    "imported_sha256": {
+      "build_relabel_map.py": "8b336d9ab5e588177ab46421451bd292a0af9e973fd3c1c57b82505d57c3f024",
+      "check_secondary_map.py": "901d02594e27875024e8234bea438d7fb03f5144f4a4221a41faa9f3136c9cb6",
+      "extract_d2.py": "74a744e5c8679299a9e8bfe647d7972cb7308282835a1bada1279307483001d3",
+      "ijiss_btp.data.loaders": "8ff7f776387b441b8274ad12842b5cf37a23397a0738a31aebbd7c63152f0027",
+      "ijiss_btp.data.splits": "2f8cbfabeee003502c256f1e1ead1505b10b65dcdc0a010221d19a6f90119e6d",
+      "ijiss_btp.eval.metrics": "f6ad1044de84b694d5bfcb2a7f6d98b1fb87f46dce5519e2dfb5ddde8e3011a0",
+      "ijiss_btp.eval.stats": "c0f8baa41482880df6f330c3c358a0b9149def447b4c4904eb04794eb4417bdb",
+      "ijiss_btp.experiments.isotropy": "b42347a92529c541df634eb773dd3be4e713f92b103beb235b4b9951a7aac9f5",
+      "label_check.py": "69c1fa98fbb479671301648aa9f4d0f1966d32e6580ce049d92ee55cc85e0bd1",
+      "training_overlap.py": "1c391809f5152026c76cf41c319a917650251962bc2c240ad2597b4d2217e670"
+    },
+    "script_sha256": "4d636afaa9b76003b30b1a54c37e6799f7531224e3e52ec90ab263d0ccab5f85",
+    "software": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "pyarrow": "26.0.0",
+      "python": "3.12.16",
+      "scipy": "1.18.1"
+    }
+  },
+  "question": "does ctrl-vit behave differently on the casia_v5 fingers whose subject has no training finger (clean) than on size-matched random subsamples of those whose subject has one (flagged)?",
+  "seconds": 53.0,
+  "settings": {
+    "auc": "histogram AUC (label_check.hist_auc) over 4000 bins on [-1, 1]: P(genuine > impostor) plus half the probability that both fall in one bin",
+    "controls": "finger-vit and DeepPrint on the same flags",
+    "corpus_label": "d2_subject",
+    "eer": "ijiss_btp.eval.stats.eer (exact ROC interpolation), as in the experiments' utility rows",
+    "impostor_pairs": 200000,
+    "min_images": 2,
+    "pair_rule": "all genuine pairs (every pair of rows of one finger) and `impostor_pairs` distinct pairs of rows of different fingers drawn uniformly at random (impostor_pairs of training_overlap.py), or every such pair when no more exist; both within the subset",
+    "participation_ratio": "participation ratio, (sum of eigenvalues)^2 / sum of squared eigenvalues of the covariance of the L2-normalised rows centred on their own mean (ijiss_btp.experiments.isotropy.spectrum_stats), on one seeded image per finger (samples = fingers) and on all images; computed in both spaces, because center_normalize L2-normalises every row after subtracting the DEV mean: the rows are rescaled by 1/||x - m|| instead of 1/||x||, and the subset-mean centring inside spectrum_stats removes only a common shift, so the two spaces can give different values; with n samples it cannot exceed min(n - 1, dim), and bounded_by_samples marks the entries where n - 1 < dim for the clean subset or a flagged subsample",
+    "prekey_rule": "for each encoder, the first seed's split of its main isotropy config (isotropy_<corpus>_<encoder>.yaml): make_split with the config's n_dev, n_tgt and min_tgt_images, as SeedContext of ijiss_btp.experiments.isotropy builds it; the mean of the split's DEV rows is subtracted from every embedding and each row is L2-normalised (center_normalize), which gives the experiments' pre-key embeddings; every statistic is then computed on the same fingers, images, pairs and seeds as in the raw space",
+    "range_percentiles": [
+      2.5,
+      97.5
+    ],
+    "range_rule": "the clean value against the mean of the flagged subsamples' values and their 2.5th to 97.5th percentiles (numpy.percentile, linear interpolation); clean_outside_flagged_range is descriptive, not a test",
+    "seed": 20261114,
+    "seed_rule": "stable_seed (ijiss_btp.experiments.isotropy) of (seed, corpus, stratum, subset, purpose); the encoder is not part of it, so the encoders of a corpus see the same fingers, images and pairs",
+    "single_draw": "each clean value is a single draw (one sample of impostor pairs and one seeded image per finger) with its own sampling error, which the flagged range does not include; clean_outside_flagged_range is descriptive, and a clean value just outside the range can fall inside it with another seed",
+    "spaces": {
+      "prekey": "experiments' pre-key space (DEV-mean centred, then L2-normalised)",
+      "raw": "raw (uncentred) cosine space"
+    },
+    "subsample_rule": "the clean subset of a stratum against `subsamples` random subsamples, without replacement, of the stratum's eligible flagged fingers, each of the clean subset's size",
+    "subsamples": 20
+  },
+  "stratum": {
+    "fingers": {
+      "clean": 56,
+      "dropped_by_image_rule": {
+        "clean": 0,
+        "flagged": 0
+      },
+      "eligible": {
+        "clean": 56,
+        "flagged": 2181
+      },
+      "fingers": 2237,
+      "flagged": 2181,
+      "images": 11185
+    },
+    "name": "casia_v5"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "code": {
+    "docker/Dockerfile.extract": "6bd0d33e8b7f97d1677aae3c0920fac6893bb7fea2d32643591f8d8d86f19bf6",
+    "docker/requirements-extract.txt": "79c01206683c3a70a9bd6d84a5d3f2939bf56f203a723cbfebde9e0f7bf8c411",
+    "extract_d2.py": "74a744e5c8679299a9e8bfe647d7972cb7308282835a1bada1279307483001d3"
+  },
+  "data_source": "real: images of the old D2 test set and the features the original scripts stored for them",
+  "dims": {
+    "deepprint": [
+      200,
+      512
+    ],
+    "fingervit": [
+      200,
+      1536
+    ]
+  },
+  "env": {
+    "git_sha": "33109c90cb0398c2a6300e3709f5c4830260d0df-dirty",
+    "image": "canvec/extract:gpu",
+    "image_id": "sha256:be5673c663cfcee9fac6b41656bf97085caa15d36b91d9a2efd3b299f1e28d0d"
+  },
+  "n": 200,
+  "old_features_sha256": {
+    "deepprint": "7f94cc58552cde5e645b893b8b90f59c8b274f659805007290e7e4f3c435a2d4",
+    "fingervit": "c66dbe6222838de7cda3e3bbb92f78b19ea23ffc03e0e423dc611fc7874f4e85"
+  },
+  "passed": true,
+  "preprocessing": {
+    "deepprint": "compilation images: cv2.imread(path, IMREAD_GRAYSCALE), the full image (no footer crop, as flx's loaders for real data), to_tensor; flx LazilyAllocatedBinarizer(5.0); one zero column (taller) or row (wider) appended only when the height-width difference is odd, because flx asserts a square after symmetric padding; flx pad_and_resize_to_deepprint_input_size (zero padding to a square, antialiased resize to 299 x 299); DeepPrint_TexMinu(num_training_subjects=8000, num_dims=256), released best_model.pyt, eval; feature = concat(texture 256, minutia 256) via flx extract_embeddings and EmbeddingLoader.combine",
+    "deepprint_parity": "parity images of the old corpus: the reference loader flx SFingeLoader._load_image (cv2.imread(path, IMREAD_GRAYSCALE), bottom 32 rows cropped: the SFinGe footer, to_tensor), then the same chain as for compilation images",
+    "fingervit": "PIL Image.open(path).convert('RGB'); torchvision Resize((224, 224)), ToTensor, Normalize(mean=[0.761, 0.760, 0.760], std=[0.287, 0.287, 0.288]); AutoModel.from_pretrained(finger-vit_giant), eval, no_grad; feature = last_hidden_state[:, 0] (CLS)",
+    "stored": "each row L2-normalised, float32; row i belongs to manifest row i"
+  },
+  "results": {
+    "deepprint": {
+      "max": 1.0000000000000004,
+      "mean": 0.9999999993527819,
+      "median": 1.0,
+      "min": 0.9999999668792242,
+      "n": 200,
+      "p5": 0.9999999999999998,
+      "passed": true,
+      "threshold": 0.999
+    },
+    "fingervit": {
+      "max": 1.0000000000000004,
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 0.9999999999999997,
+      "n": 200,
+      "p5": 0.9999999999999998,
+      "passed": true,
+      "threshold": 0.999
+    }
+  },
+  "seconds": 13.1,
+  "seed": 20261114,
+  "settings": {
+    "deepprint_flx_loader": {
+      "batch_size": 32,
+      "num_workers": 16
+    },
+    "deepprint_loader": "reference flx SFingeLoader._load_image (bottom 32 rows cropped)",
+    "fingervit_batch_size": 1,
+    "loader_workers": 16
+  },
+  "software": {
+    "PIL": "12.0.0",
+    "cuda_runtime": "12.8",
+    "cudnn": 91002,
+    "cudnn_allow_tf32": true,
+    "cv2": "4.11.0",
+    "flx_tree_sha256": "996928fba5c14a8538323d9cf0ddf9ac554c7cc9cc8614def289f261125a3701",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "huggingface_hub": "0.35.3",
+    "matmul_allow_tf32": false,
+    "numpy": "2.2.6",
+    "nvidia_driver": "595.99.02",
+    "pandas": "2.3.3",
+    "pyarrow": "21.0.0",
+    "python": "3.12.3",
+    "safetensors": "0.6.2",
+    "tokenizers": "0.22.1",
+    "torch": "2.9.0+cu128",
+    "torchmetrics": "1.8.2",
+    "torchvision": "0.24.0+cu128",
+    "transformers": "4.57.1"
+  },
+  "threshold": 0.999,
+  "weights_sha256": {
+    "finger-vit_giant/config.json": "5eeefae61674737a7c1b7a20486d63a39f5b4f2c27cadc3f975596cda18e9930",
+    "finger-vit_giant/model.safetensors": "d386f7acae9289c075ccf3560976a3e2519da13d82cecb6aa72a0d490d208fc2",
+    "fixed-length-fingerprint-extractors/best_model.pyt": "2683a04427bacd54adc00cfdc97474625b1e11e5a9e6672c5129f033018f8a28"
+  }
+}
